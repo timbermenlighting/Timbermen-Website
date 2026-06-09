@@ -523,6 +523,16 @@
     .quote-form { padding: 28px 20px; }
     .about-stats { grid-template-columns: 1fr 1fr; }
   }
+  
+  .service-btn {
+  display: inline-block; margin-top: 20px;
+  color: var(--red); font-weight: 700; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  text-decoration: none; border-bottom: 2px solid var(--red);
+  padding-bottom: 2px; transition: opacity 0.2s;
+}
+.service-btn:hover { opacity: 0.7; }
+
 </style>
 </head>
 <body>
@@ -701,30 +711,35 @@
           <span class="service-icon">💡</span>
           <div class="service-name">Permanent Architectural Lighting</div>
           <div class="service-desc">Our flagship service. Recessed LED fixtures installed along your roofline, fascia, and eaves — completely hidden by day, stunning by night. Engineered for Minnesota freeze-thaw cycles and rated for 50,000+ hours.</div>
+            <a href="#" onclick="selectService('Permanent Architectural Lighting')" class="service-btn">Start My Quote →</a>
         </div>
         <div class="service-card">
           <span class="service-icon">🔒</span>
           <div class="service-name">Security Lighting</div>
           <div class="service-desc">Bright, motion-aware illumination placed at entry points, garages, and dark corners. Deters intruders and gives you peace of mind year-round — without the look of construction-site floodlights.</div>
+                      <a href="#" onclick="selectService('Security Lighting')" class="service-btn">Start My Quote →</a>
         </div>
         <div class="service-card">
           <span class="service-icon">🎄</span>
           <div class="service-name">Holiday Lighting</div>
           <div class="service-desc">Never climb a ladder again. Our permanent system handles every holiday — Christmas, Halloween, Fourth of July — with programmable color scenes and custom schedules. One install, every celebration.</div>
+                      <a href="#" onclick="selectService('Holiday Lighting')" class="service-btn">Start My Quote →</a>
         </div>
         <div class="service-card">
           <span class="service-icon">🏈</span>
           <div class="service-name">Game Day Lighting</div>
           <div class="service-desc">Custom color scenes built around your team's schedule. Switch to Vikings purple, Wild green, or Twins red with one tap on game day. Makes every kickoff feel like a block party.</div>
+                      <a href="#" onclick="selectService('Game Day Lighting')" class="service-btn">Start My Quote →</a>
         </div>
         <div class="service-card">
           <span class="service-icon">🎨</span>
           <div class="service-name">Accent Lighting</div>
           <div class="service-desc">Highlight your home's best architectural features — columns, dormers, stonework, landscaping. Elegant, custom illumination that adds depth and drama after dark.</div>
+                      <a href="#" onclick="selectService('Accent Lighting')" class="service-btn">Start My Quote →</a>
         </div>
         <div class="service-card">
           <span class="service-icon">📱</span>
-          <div class="service-name">Smart Control Systems</div>
+          <div class="service-name">Smart Control Systems With Installations</div>
           <div class="service-desc">Every installation pairs with an intuitive app. Set schedules, create scenes, adjust brightness, and control your lights from anywhere. Works with most smart home platforms.</div>
         </div>
       </div>
@@ -1028,6 +1043,18 @@
   function closeMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
   }
+function selectService(serviceName) {
+  showPage('contact');
+  setTimeout(function() {
+    var select = document.getElementById('service');
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].text === serviceName) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  }, 100);
+}
 
   // Form submission via Formspree (AJAX)
   const form = document.getElementById('quoteForm');
