@@ -226,6 +226,7 @@
     background: rgba(255,255,255,0.08); padding: 40px 36px;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative; overflow: hidden;
+    border-radius: 50px;
   }
   .service-card::before {
     content: ''; position: absolute; top: 0; left: 0;
@@ -245,7 +246,13 @@
   .service-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; line-height: 1.6; }
 
   /* ── WHY ── */
-.why-section {
+.reviews-section {
+  background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2499.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+.reviews-section .section-title { color: var(--white); }
+.reviews-section .section-eyebrow { color: var(--red); }
   position: relative;
   background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2486.jpeg');
   background-size: cover;
@@ -260,6 +267,7 @@
   .why-card {
     background: rgba(255,255,255,0.04); padding: 36px 30px;
     transition: background 0.2s;
+    border-radius: 50px
   }
   .why-card:hover { background: rgba(255,255,255,0.06); }
   .why-number {
@@ -369,7 +377,7 @@
   .contact-detail-text strong { display: block; color: var(--navy); font-weight: 600; margin-bottom: 2px; }
 
   /* FORM */
-  .quote-form { background: var(--off-white); padding: 44px 40px; border-radius: 4px; }
+  .quote-form { background: var(--off-white); padding: 44px 40px; border-radius: 50px; }
   .quote-form h3 {
     font-family: var(--font-display); font-weight: 800; font-size: 1.7rem;
     text-transform: uppercase; color: var(--navy); margin-bottom: 8px;
@@ -428,16 +436,16 @@
   .cta-band p { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 32px; }
   .cta-band .btn-white {
     background: var(--white); color: var(--red);
-    border: none; padding: 15px 36px; border-radius: 4px;
+    border: none; padding: 15px 36px; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
     letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
     text-decoration: none; display: inline-block; transition: opacity 0.2s;
     margin: 6px 8px;
   }
   .cta-band .btn-white:hover { opacity: 0.88; }
-  .cta-band .btn-outline-white {
-    background: transparent; color: var(--white);
-    border: 2px solid rgba(255,255,255,0.5); padding: 13px 34px; border-radius: 4px;
+.cta-band .btn-outline-white {
+  background: #a93224; color: var(--white);
+  border: 2px solid #a93224; padding: 13px 34px; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
     letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
     text-decoration: none; display: inline-block; transition: border-color 0.2s;
@@ -493,21 +501,51 @@
     gap: 20px; margin-top: 48px;
   }
   .review-card {
-    background: var(--white); border: 1.5px solid var(--light-gray);
-    padding: 28px 28px; border-radius: 4px;
+    background: rgba(255,255,255,0.08); border: none;
+    padding: 28px 28px; border-radius: 50px;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
   .review-card:hover { border-color: var(--navy); box-shadow: 0 6px 24px rgba(0,0,0,0.07); }
   .review-stars { color: #F5A623; font-size: 1rem; margin-bottom: 14px; }
   .review-text { color: #555; font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px; font-style: italic; }
-  .review-author { font-weight: 700; font-size: 0.85rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; }
+ .review-author { font-weight: 700; font-size: 0.85rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; }
+.about-section { background: var(--navy); }
+.about-section .section-title { color: var(--white); }
+.about-section .section-eyebrow { color: var(--red); }
+.about-section .about-text p { color: rgba(255,255,255,0.75); }
+.about-section .about-text a { color: var(--red); }
+.about-section .astat-num { color: var(--white); }
+.about-section .astat-label { color: rgba(255,255,255,0.55); }
+.about-section .astat { border-left: 3px solid var(--red); }
+.gallery-section { background: var(--navy); }
+.gallery-section .section-title { color: var(--white); }
+.gallery-section .section-eyebrow { color: var(--red); }
+.gallery-section .section-sub { color: rgba(255,255,255,0.7); }
+.contact-section { background: var(--navy); }
+.contact-section .section-title { color: var(--white); }
+.contact-section .section-eyebrow { color: var(--red); }
+.contact-section .contact-info h3 { color: var(--white); }
+.contact-section .contact-info p { color: rgba(255,255,255,0.75); }
+.contact-section .contact-detail-text { color: rgba(255,255,255,0.75); }
+.contact-section .contact-detail-text strong { color: var(--white); }
+.contact-section .contact-icon { background: rgba(255,255,255,0.1); }
+.quote-form { background: rgba(255,255,255,0.06); border-radius: 50px; }
+.quote-form h3 { color: var(--white); }
+.quote-form p { color: rgba(255,255,255,0.65); }
+.form-group label { color: rgba(255,255,255,0.85); }
+.form-group input,
+.form-group select,
+.form-group textarea { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: var(--white); }
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
 
   /* ── UTILITY ── */
   .mt-8 { margin-top: 8px; }
   .text-center { text-align: center; }
   .text-center .section-sub { margin: 0 auto; }
 .bg-off {
-  background-image: linear-gradient(rgba(10,20,48,0.82), rgba(10,20,48,0.82)), url('IMG_2489.png');
+  background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.82)), url('IMG_2489.png');
   background-size: cover;
   background-position: center;
 }
@@ -679,7 +717,7 @@
   </section>
 
   <!-- REVIEWS -->
-  <section class="section">
+  <section class="section reviews-section">
     <div class="section-inner">
       <div class="section-eyebrow">What Customers Say</div>
       <h2 class="section-title">First-Party Testimonials</h2>
@@ -800,7 +838,7 @@
 
 <!-- ═══════════════ ABOUT PAGE ═══════════════ -->
 <div id="page-about" class="page">
-  <section class="section">
+  <section class="section about-section">
     <div class="section-inner">
       <div class="section-eyebrow">About Timbermen Lighting</div>
       <h1 class="section-title">Built for Twin Cities Homeowners</h1>
@@ -861,7 +899,7 @@
 
 <!-- ═══════════════ GALLERY PAGE ═══════════════ -->
 <div id="page-gallery" class="page">
-  <section class="section">
+  <section class="section gallery-section">
     <div class="section-inner">
       <div class="section-eyebrow">Our Work</div>
       <h1 class="section-title">Project Gallery</h1>
@@ -900,7 +938,7 @@
 
 <!-- ═══════════════ CONTACT PAGE ═══════════════ -->
 <div id="page-contact" class="page">
-  <section class="section">
+  <section class="section contact-session">
     <div class="section-inner">
       <div class="section-eyebrow">Get In Touch</div>
       <h1 class="section-title">Start My Quote</h1>
