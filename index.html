@@ -206,7 +206,9 @@
     line-height: 1; color: var(--navy); letter-spacing: -0.01em;
     margin-bottom: 16px;
   }
-  .section-title.light { color: var(--white); }
+.section-title.light { color: var(--white); }
+.bg-off .section-title { color: var(--white); }
+.bg-off .section-sub { color: rgba(255,255,255,0.7); }
   .section-sub {
     color: #555; font-size: 1.05rem; line-height: 1.6; max-width: 560px;
   }
@@ -221,7 +223,7 @@
     border: 2px solid var(--light-gray);
   }
   .service-card {
-    background: var(--white); padding: 40px 36px;
+    background: rgba(255,255,255,0.1); padding: 40px 36px;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative; overflow: hidden;
   }
@@ -237,10 +239,10 @@
   }
   .service-name {
     font-family: var(--font-display); font-weight: 800; font-size: 1.4rem;
-    text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    text-transform: uppercase; color: var(--white); margin-bottom: 10px;
     letter-spacing: 0.02em;
   }
-  .service-desc { color: #666; font-size: 0.95rem; line-height: 1.6; }
+  .service-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; line-height: 1.6; }
 
   /* ── WHY ── */
 .why-section {
@@ -505,7 +507,7 @@
   .text-center { text-align: center; }
   .text-center .section-sub { margin: 0 auto; }
 .bg-off {
-  background-image: linear-gradient(rgba(245,245,240,0.85), rgba(245,245,240,0.85)), url('IMG_2489.png');
+  background-image: linear-gradient(rgba(10,20,48,0.82), rgba(10,20,48,0.82)), url('YOUR_FILENAME_HERE');
   background-size: cover;
   background-position: center;
 }
@@ -557,7 +559,7 @@
     <li><a href="#" onclick="showPage('services')">Services</a></li>
     <li><a href="#" onclick="showPage('about')">About</a></li>
     <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
-    <li><a href="#" onclick="showPage('contact')" class="nav-cta">Conplimentary Consultation</a></li>
+    <li><a href="#" onclick="showPage('contact')" class="nav-cta">Start My Quote</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -570,7 +572,7 @@
   <a href="#" onclick="showPage('services');closeMenu()">Services</a>
   <a href="#" onclick="showPage('about');closeMenu()">About</a>
   <a href="#" onclick="showPage('gallery');closeMenu()">Gallery</a>
-  <a href="#" onclick="showPage('contact');closeMenu()" class="m-cta">Get a Complimentary Consultation</a>
+  <a href="#" onclick="showPage('contact');closeMenu()" class="m-cta">Start My Quote</a>
 </div>
 
 <!-- ═══════════════ HOME PAGE ═══════════════ -->
@@ -593,7 +595,7 @@
         Timbermen Lighting designs and installs permanent architectural lighting for Twin Cities homeowners — clean, powerful, and made to outlast the seasons.
       </p>
       <div class="hero-actions">
-        <a href="#" class="btn-primary" onclick="showPage('contact')">Get a Complimentary Consultation</a>
+        <a href="#" class="btn-primary" onclick="showPage('contact')">Start My Quote</a>
         <a href="#" class="btn-outline" onclick="showPage('services')">Our Services</a>
       </div>
       <div class="hero-stats">
@@ -704,8 +706,8 @@
   <!-- CTA -->
   <section class="cta-band">
     <h2>Ready to Light Up Your Home?</h2>
-    <p>Book a complimentary in-home consultation. No pressure, clear pricing, real trade-level work.</p>
-    <a href="#" class="btn-white" onclick="showPage('contact')">Get My Complimentary Consultation</a>
+    <p>Book a complimentary in-home consultation for a personalized quote. No pressure, clear pricing, real trade-level work.</p>
+    <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
     <a href="tel:6124788428" class="btn-outline-white">Call (612) 478-8428</a>
   </section>
 
@@ -713,7 +715,7 @@
 
 <!-- ═══════════════ SERVICES PAGE ═══════════════ -->
 <div id="page-services" class="page">
-  <section class="section">
+  <section class="section bg-off">
     <div class="section-inner">
       <div class="section-eyebrow">What We Offer</div>
       <h1 class="section-title">Permanent Architectural<br>Lighting Services</h1>
@@ -766,7 +768,7 @@
       <div class="why-grid" style="margin-top:48px;text-align:left;">
         <div class="why-card">
           <div class="why-number">01</div>
-          <div class="why-title">Complimentary Consultation</div>
+          <div class="why-title">Complimentary Consultation For A Personalized Quote</div>
           <div class="why-text">We visit your home, assess the roofline and architecture, and give you clear pricing with zero pressure.</div>
         </div>
         <div class="why-card">
@@ -789,9 +791,9 @@
   </section>
 
   <section class="cta-band">
-    <h2>Start With a Complimentary Consultation</h2>
+    <h2>Start With a Complimentary Consultation For A Personalized Quote</h2>
     <p>We'll come to you, answer your questions, and provide clear pricing — no obligation.</p>
-    <a href="#" class="btn-white" onclick="showPage('contact')">Request a Consultation</a>
+    <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
     <a href="tel:6124788428" class="btn-outline-white">Call Us Now</a>
   </section>
 </div>
@@ -851,8 +853,8 @@
 
   <section class="cta-band">
     <h2>Let's Talk About Your Home</h2>
-    <p>Get a complimentary consultation and see exactly how permanent lighting can transform your property.</p>
-    <a href="#" class="btn-white" onclick="showPage('contact')">Get a Complimentary Consultation</a>
+    <p>Get a complimentary consultation for a personalized quote and see exactly how permanent lighting can transform your property.</p>
+    <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
     <a href="tel:6124788428" class="btn-outline-white">Call (612) 478-8428</a>
   </section>
 </div>
@@ -891,7 +893,7 @@
   </section>
   <section class="cta-band">
     <h2>Want Your Home in the Gallery?</h2>
-    <p>Book a consultation and we'll design something worth showing off.</p>
+    <p>Book a complimentary consultation for a personalized quote and we'll design something worth showing off.</p>
     <a href="#" class="btn-white" onclick="showPage('contact')">Get Started Today</a>
   </section>
 </div>
@@ -901,7 +903,7 @@
   <section class="section">
     <div class="section-inner">
       <div class="section-eyebrow">Get In Touch</div>
-      <h1 class="section-title">Request a Complimentary Consultation</h1>
+      <h1 class="section-title">Start My Quote</h1>
       <div class="contact-layout">
         <div class="contact-info">
           <h3>Talk to a Lighting Expert</h3>
@@ -938,11 +940,11 @@
 
         <!-- QUOTE FORM -->
         <div class="quote-form">
-          <h3>Complimentary Consultation Request</h3>
+          <h3>Quote Request</h3>
           <p>Fill out the form and we'll be in touch within one business day.</p>
           <div id="formSuccess" class="form-success">
             <h4>Request Received!</h4>
-            <p>We'll reach out within one business day to schedule your complimentary consultation. Thanks for choosing Timbermen Lighting!</p>
+            <p>We'll reach out within one business day to schedule your complimentary consultation for a personalized quote. Thanks for choosing Timbermen Lighting!</p>
           </div>
           <form id="quoteForm" action="https://formspree.io/f/xnjyvjyz" method="POST">
             <div class="form-row">
@@ -983,7 +985,7 @@
               <label for="details">Project Details</label>
               <textarea id="details" name="details" placeholder="Tell us about your home, what you're looking for, or any questions you have..."></textarea>
             </div>
-            <button type="submit" class="form-submit">Send My Consultation Request →</button>
+            <button type="submit" class="form-submit">Send My Quote Request →</button>
           </form>
         </div>
       </div>
@@ -1015,7 +1017,7 @@
         <li><a href="#" onclick="showPage('about')">About Us</a></li>
         <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
         <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-        <li><a href="#" onclick="showPage('contact')">Complimentary Consultation</a></li>
+        <li><a href="#" onclick="showPage('contact')">Start My Quote</a></li>
       </ul>
     </div>
     <div class="footer-col">
