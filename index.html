@@ -160,7 +160,7 @@
   .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn-primary {
     background: var(--red); color: var(--white);
-    border: none; padding: 15px 32px; border-radius: 4px;
+    border: none; padding: 14px 28px; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
     letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
     text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s;
@@ -168,7 +168,7 @@
   .btn-primary:hover { background: var(--red-light); transform: translateY(-1px); }
   .btn-outline {
     background: transparent; color: var(--white);
-    border: 2px solid rgba(255,255,255,0.4); padding: 13px 30px; border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.4); padding: 13px 30px; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
     letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
     text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s;
@@ -243,7 +243,12 @@
   .service-desc { color: #666; font-size: 0.95rem; line-height: 1.6; }
 
   /* ── WHY ── */
-  .why-section { background: var(--navy); }
+.why-section {
+  position: relative;
+  background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2486.jpeg');
+  background-size: cover;
+  background-position: center;
+}
   .why-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1px; margin-top: 56px;
@@ -251,13 +256,13 @@
     border: 1px solid rgba(255,255,255,0.08);
   }
   .why-card {
-    background: var(--navy-mid); padding: 36px 30px;
+    background: rgba(255,255,255,0.04); padding: 36px 30px;
     transition: background 0.2s;
   }
   .why-card:hover { background: rgba(255,255,255,0.06); }
   .why-number {
     font-family: var(--font-display); font-weight: 900; font-size: 3.5rem;
-    color: var(--red); line-height: 1; margin-bottom: 14px; opacity: 0.7;
+    color: var(--white); line-height: 1; margin-bottom: 14px; opacity: 0.7;
   }
   .why-title {
     font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
@@ -499,7 +504,11 @@
   .mt-8 { margin-top: 8px; }
   .text-center { text-align: center; }
   .text-center .section-sub { margin: 0 auto; }
-  .bg-off { background: var(--off-white); }
+.bg-off {
+  background-image: linear-gradient(rgba(245,245,240,0.85), rgba(245,245,240,0.85)), url('IMG_2489.png');
+  background-size: cover;
+  background-position: center;
+}
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -578,7 +587,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow">Minnesota's Permanent Lighting Specialists</div>
       <h1 class="hero-headline">
-        Built Into<br>Your Home.<br><em>Built to Last.</em>
+        Timbermen<br>Lighting:<br><em>Built to Last.</em>
       </h1>
       <p class="hero-sub">
         Timbermen Lighting designs and installs permanent architectural lighting for Twin Cities homeowners — clean, powerful, and made to outlast the seasons.
@@ -604,7 +613,39 @@
     </div>
   </section>
 
-  <!-- WHY US -->
+  <!-- SERVICES PREVIEW -->
+  <section class="section bg-off">
+    <div class="section-inner">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Our Top Services</h2>
+      <p class="section-sub">From permanent roofline lighting to game day color scenes, we cover every way light can elevate your home.</p>
+      <div class="services-grid" style="margin-top:48px;">
+        <div class="service-card">
+          <span class="service-icon">💡</span>
+          <div class="service-name">Permanent Architectural Lighting</div>
+          <div class="service-desc">Custom exterior illumination that looks built-in, lasts year-round, and dramatically boosts curb appeal.</div>
+          <a href="#" onclick="selectService('Permanent Architectural Lighting')" class="service-btn">Start My Quote →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔒</span>
+          <div class="service-name">Security Lighting</div>
+          <div class="service-desc">Bright, reliable illumination that deters intruders and improves nighttime safety around your property.</div>
+                    <a href="#" onclick="selectService('Security Lighting')" class="service-btn">Start My Quote →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎄</span>
+          <div class="service-name">Holiday Lighting</div>
+          <div class="service-desc">Make your home festive, elegant, and effortless with custom seasonal illumination you never have to hang again.</div>
+                    <a href="#" onclick="selectService('Holiday Lighting')" class="service-btn">Start My Quote →</a>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="#" class="btn-primary" onclick="showPage('services')">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+<!-- WHY US -->
   <section class="section why-section">
     <div class="section-inner">
       <div class="section-eyebrow">Why Timbermen</div>
@@ -631,35 +672,6 @@
           <div class="why-title">Trade-Level Care</div>
           <div class="why-text">We protect your property, communicate clearly, and stand behind every job. No side-hustle shortcuts.</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES PREVIEW -->
-  <section class="section bg-off">
-    <div class="section-inner">
-      <div class="section-eyebrow">What We Do</div>
-      <h2 class="section-title">Our Top Services</h2>
-      <p class="section-sub">From permanent roofline lighting to game day color scenes, we cover every way light can elevate your home.</p>
-      <div class="services-grid" style="margin-top:48px;">
-        <div class="service-card">
-          <span class="service-icon">💡</span>
-          <div class="service-name">Permanent Architectural Lighting</div>
-          <div class="service-desc">Custom exterior illumination that looks built-in, lasts year-round, and dramatically boosts curb appeal.</div>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">🔒</span>
-          <div class="service-name">Security Lighting</div>
-          <div class="service-desc">Bright, reliable illumination that deters intruders and improves nighttime safety around your property.</div>
-        </div>
-        <div class="service-card">
-          <span class="service-icon">🎄</span>
-          <div class="service-name">Holiday Lighting</div>
-          <div class="service-desc">Make your home festive, elegant, and effortless with custom seasonal illumination you never have to hang again.</div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:36px;">
-        <a href="#" class="btn-primary" onclick="showPage('services')">View All Services</a>
       </div>
     </div>
   </section>
