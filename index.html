@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Timbermen Lighting — Permanent Architectural Lighting, Minnesota">
+<meta property="og:description" content="Timbermen Lighting designs and installs permanent architectural lighting for Twin Cities homeowners.">
+<meta property="og:image" content="https://timbermen-lighting.com/Untitled298_20260603164602.jpg">
+<meta property="og:url" content="https://timbermen-lighting.com">
   <link rel="preload" as="image" href="IMG_2471.png">
 <title>Timbermen Lighting — Permanent Architectural Lighting, Minnesota</title>
 <style>
@@ -218,7 +222,7 @@
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2px; margin-top: 56px;
+    gap: 16px; margin-top: 56px;
     background: transparent;
     border: none;
   }
@@ -303,7 +307,7 @@
   .about-badge {
     position: absolute; bottom: -20px; right: -20px;
     background: var(--red); color: var(--white);
-    padding: 20px 24px; border-radius: 4px;
+    padding: 20px 24px; border-radius: 16px;
     font-family: var(--font-display); font-weight: 800;
     font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em;
     text-align: center; line-height: 1.2;
@@ -370,7 +374,7 @@
     display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px;
   }
   .contact-icon {
-    width: 40px; height: 40px; background: var(--navy); border-radius: 4px;
+    width: 40px; height: 40px; background: var(--navy); border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     color: var(--white); font-size: 1rem; flex-shrink: 0;
   }
@@ -395,7 +399,7 @@
   .form-group select,
   .form-group textarea {
     width: 100%; padding: 12px 16px;
-    border: 1.5px solid #D8D8D0; border-radius: 4px;
+    border: 1.5px solid #D8D8D0; border-radius: 50px;
     font-family: var(--font-body); font-size: 0.95rem; color: var(--white);
     background: rgba(255,255,255,0.1); transition: border-color 0.2s, box-shadow 0.2s;
     appearance: none;
@@ -418,13 +422,13 @@
   .form-submit:hover { background: var(--red-light); }
   .form-success {
     display: none; text-align: center; padding: 32px;
-    background: #eefbf4; border-radius: 4px; border: 1px solid #9de0bf;
+    background: #eefbf4; border-radius: 20px; border: 1px solid #9de0bf;
   }
   .form-success h4 {
     font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
     text-transform: uppercase; color: #1a6b3c; margin-bottom: 8px;
   }
-  .form-success p { color: #2d8c5a; font-size: 0.95rem; }
+  .form-success p { color: #1a5c3a; font-size: 0.95rem; }
 
   /* ── CTA BAND ── */
   .cta-band {
@@ -583,6 +587,134 @@
 }
 .service-btn:hover { opacity: 0.7; }
 
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 4px 0;
+}
+.faq-question {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 0; font-family: var(--font-body); font-weight: 600;
+  font-size: 1rem; color: var(--white); text-align: left; gap: 16px;
+}
+.faq-question span {
+  font-size: 1.4rem; color: var(--red); flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.faq-question.open span { transform: rotate(45deg); }
+.faq-answer {
+  display: none; padding: 0 0 20px 0;
+  color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;
+}
+.faq-answer.open { display: block; }
+
+/* ── FLOATING BAR ── */
+.floating-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: #001a40;
+  padding: 14px 20px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 -2px 30px rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.fb-icon {
+  display: flex; flex-direction: column; align-items: center;
+  color: rgba(255,255,255,0.6); text-decoration: none;
+  font-family: var(--font-body); font-size: 0.65rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  gap: 5px; flex: 1; transition: color 0.2s;
+}
+.fb-icon svg { width: 22px; height: 22px; }
+.fb-icon:hover { color: var(--white); }
+.fb-quote {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--red); color: var(--white) !important;
+  text-decoration: none; padding: 12px 28px; border-radius: 50px; flex: 2.5;
+  text-align: center; font-family: var(--font-body); font-weight: 700;
+  font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 3px;
+  box-shadow: 0 4px 16px rgba(201,30,30,0.4);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.fb-quote:hover { background: var(--red-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,30,30,0.5); }
+.fb-quote span { font-size: 0.62rem; color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+.fb-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+@media (min-width: 901px) { .floating-bar { display: none; } }
+@media (max-width: 900px) { body { padding-bottom: 90px; } }
+
+#progress-bar {
+  position: fixed; top: 0; left: 0; z-index: 999;
+  height: 3px; width: 0%;
+  background: linear-gradient(to right, var(--red), #ff6b6b);
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(201,30,30,0.6);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+.gallery-item { border-radius: 12px; }
+.gallery-item img { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,15,40,0.85) 0%, rgba(0,15,40,0.2) 50%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 20px; opacity: 0; transition: opacity 0.35s ease;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-caption {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1rem; text-transform: uppercase;
+  color: var(--white); letter-spacing: 0.06em;
+  transform: translateY(8px); transition: transform 0.35s ease;
+}
+.gallery-item:hover .gallery-caption { transform: translateY(0); }
+.gallery-expand {
+  position: absolute; top: 12px; right: 12px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.35s;
+}
+.gallery-item:hover .gallery-expand { opacity: 1; }
+.gallery-expand svg { width: 14px; height: 14px; stroke: white; }
+
+#lightbox {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,10,30,0.95);
+  align-items: center; justify-content: center;
+  flex-direction: column; backdrop-filter: blur(8px); padding: 24px;
+}
+#lightbox.open { display: flex; }
+#lightbox-placeholder {
+  width: min(600px, 90vw); height: min(400px, 50vh);
+  border-radius: 12px;
+}
+#lightbox-close {
+  position: absolute; top: 20px; right: 20px;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.1); border: none; cursor: pointer;
+  color: white; font-size: 1.2rem; transition: background 0.2s;
+}
+#lightbox-close:hover { background: rgba(255,255,255,0.2); }
+#lightbox-nav { display: flex; gap: 12px; margin-top: 16px; }
+#lightbox-nav button {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: white; padding: 8px 20px; border-radius: 50px; cursor: pointer;
+  font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em; transition: background 0.2s;
+}
+#lightbox-nav button:hover { background: rgba(255,255,255,0.15); }
+
 </style>
 </head>
 <body>
@@ -618,7 +750,7 @@
 <div id="page-home" class="page active">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero fade-in">
     <!--
       TO ADD YOUR PHOTO: replace the .hero-placeholder div below with:
       <img class="IMG_2471.png" src="logo.png" alt="Timbermen Lighting installation">
@@ -640,15 +772,15 @@
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num">5★</div>
+<div class="stat-num" data-target="5">5★</div>
           <div class="stat-label">Google Rating</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">10+</div>
+<div class="stat-num" data-target="10">10+</div>
           <div class="stat-label">5-Star Reviews</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">10+</div>
+<div class="stat-num" data-target="10">10+</div>
           <div class="stat-label">Areas Served</div>
         </div>
       </div>
@@ -656,7 +788,7 @@
   </section>
 
   <!-- SERVICES PREVIEW -->
-  <section class="section bg-off">
+  <section class="section bg-off fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">What We Do</div>
       <h2 class="section-title">Our Top Services</h2>
@@ -719,7 +851,7 @@
   </section>
 
   <!-- REVIEWS -->
-  <section class="section reviews-section">
+  <section class="section reviews-section fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">What Customers Say</div>
       <h2 class="section-title">First-Party Testimonials</h2>
@@ -743,8 +875,109 @@
     </div>
   </section>
 
+<!-- Q&A -->
+<section class="section" style="background:#081530;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Got Questions?</div>
+    <h2 class="section-title" style="color:var(--white);">Frequently Asked Questions</h2>
+    <div id="faq" style="margin-top:48px;">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How much does permanent lighting cost? <span>+</span></button>
+        <div class="faq-answer">Most installations range from $2,000–$6,000 depending on the size of your home and the services selected. We provide clear, itemized pricing during your complimentary consultation — no surprises.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you offer free estimates? <span>+</span></button>
+        <div class="faq-answer">Yes — every estimate is completely free. We come to your home, assess your roofline and property, and give you a personalized quote with zero obligation or pressure.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How long does installation take? <span>+</span></button>
+        <div class="faq-answer">Most residential installations are completed in a single day. Larger or more complex properties may take two days. We'll give you a clear timeline before we start.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What areas do you serve? <span>+</span></button>
+        <div class="faq-answer">We serve the Twin Cities metro area and 10+ surrounding communities including Blaine, Eagan, Eden Prairie, Maple Grove, Woodbury, Stillwater, and more. Not sure if we cover your area? Give us a call.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How long do the lights last? <span>+</span></button>
+        <div class="faq-answer">Our LED fixtures are rated for 50,000+ hours of use. That's over 20 years of nightly use. They're built to last — not replaced every season like traditional holiday lights.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Are the lights weatherproof for Minnesota winters? <span>+</span></button>
+<div class="faq-answer">Absolutely. Every fixture we install is IP68 rated — the highest waterproof rating available — meaning they're fully protected against dust, water, and moisture. They're engineered specifically to handle Minnesota's freeze-thaw cycles, heavy snow loads, and extreme cold. We don't cut corners on weatherproofing.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I control the colors from my phone? <span>+</span></button>
+        <div class="faq-answer">Yes. Every installation comes with app control so you can change colors, set schedules, create scenes, and adjust brightness right from your phone — from anywhere.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What app do you use to control the lights? <span>+</span></button>
+        <div class="faq-answer">We use a professional-grade smart lighting app that's intuitive and easy to use. We set it up for you during installation and walk you through every feature before we leave.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do I have to take them down every year? <span>+</span></button>
+        <div class="faq-answer">Never. That's the whole point. Our lights are permanently installed and stay up year-round. No more climbing ladders, no more tangled strands, no more storing boxes of lights every January.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Will installation damage my home or roofline? <span>+</span></button>
+        <div class="faq-answer">No. We use professional mounting hardware specifically designed to attach to your fascia or soffit without causing damage. We protect your property throughout the entire installation process.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What happens if a light goes out or stops working? <span>+</span></button>
+        <div class="faq-answer">We stand behind our work. If you experience any issues with your installation, reach out and we'll make it right. Our fixtures are high quality and failures are rare, but we've got you covered.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can the lights be installed on any type of home? <span>+</span></button>
+        <div class="faq-answer">We've installed on all types of homes — vinyl siding, brick, stucco, wood, and more. During your free estimate we'll assess your home and recommend the best mounting approach for your specific property.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you do holiday lighting only or year-round? <span>+</span></button>
+        <div class="faq-answer">Year-round. Our permanent lighting works for every season — Christmas, Halloween, Fourth of July, game days, or just everyday curb appeal. One install, endless possibilities.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I change colors for different holidays and game days? <span>+</span></button>
+        <div class="faq-answer">Yes — that's one of the best features. Switch to red and green for Christmas, orange and purple for Halloween, red white and blue for the Fourth, or Vikings purple on game day. All from your phone in seconds.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you do commercial properties or just residential? <span>+</span></button>
+        <div class="faq-answer">We primarily focus on residential properties to ensure every homeowner gets our full attention and best work. Interested in a commercial project? Give us a call and we'll discuss your options.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Are you licensed and insured? <span>+</span></button>
+        <div class="faq-answer">Yes. Timbermen Lighting is fully licensed and insured. You can have complete peace of mind knowing your property and our crew are protected throughout every installation.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you offer any warranty? <span>+</span></button>
+        <div class="faq-answer">We stand behind every installation we do. We use high quality fixtures rated for 50,000+ hours and we'll address any issues that arise from our workmanship. Ask us about warranty details during your free estimate.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How is Timbermen different from competitors like Govee? <span>+</span></button>
+        <div class="faq-answer">Govee and similar products are DIY consumer-grade lights designed to be temporary. Timbermen installs professional architectural-grade fixtures that are hidden, permanent, and built for Minnesota weather. The look, durability, and quality are in a completely different class.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- CTA -->
-  <section class="cta-band">
+  <section class="cta-band fade-in">
     <h2>Ready to Light Up Your Home?</h2>
     <p>Book a complimentary in-home consultation for a personalized quote. No pressure, clear pricing, real trade-level work.</p>
     <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
@@ -755,7 +988,7 @@
 
 <!-- ═══════════════ SERVICES PAGE ═══════════════ -->
 <div id="page-services" class="page">
-  <section class="section bg-off">
+  <section class="section bg-off fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">What We Offer</div>
       <h1 class="section-title">Permanent Architectural<br>Lighting Services</h1>
@@ -830,7 +1063,7 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band fade-in">
     <h2>Start With a Complimentary Consultation For A Personalized Quote</h2>
     <p>We'll come to you, answer your questions, and provide clear pricing — no obligation.</p>
     <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
@@ -840,7 +1073,7 @@
 
 <!-- ═══════════════ ABOUT PAGE ═══════════════ -->
 <div id="page-about" class="page">
-  <section class="section about-section">
+  <section class="section about-section fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">About Timbermen Lighting</div>
       <h1 class="section-title">Built for Twin Cities Homeowners</h1>
@@ -857,10 +1090,10 @@
           <p>From Blaine to Eagan, Eagan to Maple Grove — we've lit up homes all across the metro. Every crew member treats your house like it's their own.</p>
           <p>Ready to upgrade your home? Call us at <a href="tel:6124788428" style="color:var(--red);font-weight:600;">(612) 478-8428</a>.</p>
           <div class="about-stats">
-            <div class="astat"><div class="astat-num">5★</div><div class="astat-label">Google Rating</div></div>
-            <div class="astat"><div class="astat-num">10+</div><div class="astat-label">Reviews</div></div>
-            <div class="astat"><div class="astat-num">10+</div><div class="astat-label">Areas Served</div></div>
-            <div class="astat"><div class="astat-num">100%</div><div class="astat-label">Satisfaction</div></div>
+<div class="astat-num" data-target="5">5★</div><div class="astat-label">Google Rating</div></div>
+<div class="astat-num" data-target="10">10+</div><div class="astat-label">Reviews</div></div>
+<div class="astat-num" data-target="10">10+</div><div class="astat-label">Areas Served</div></div>
+<div class="astat-num" data-target="100">100%</div><div class="astat-label">Satisfaction</div></div>
           </div>
         </div>
       </div>
@@ -891,7 +1124,7 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band fade-in">
     <h2>Let's Talk About Your Home</h2>
     <p>Get a complimentary consultation for a personalized quote and see exactly how permanent lighting can transform your property.</p>
     <a href="#" class="btn-white" onclick="showPage('contact')">Start My Quote</a>
@@ -901,46 +1134,79 @@
 
 <!-- ═══════════════ GALLERY PAGE ═══════════════ -->
 <div id="page-gallery" class="page">
-  <section class="section gallery-section">
+  <section class="section gallery-section fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">Our Work</div>
       <h1 class="section-title">Project Gallery</h1>
       <p class="section-sub">Every project is unique — designed around the home's architecture and the homeowner's vision.</p>
-      <div class="gallery-grid">
-        <div class="gallery-item ph-1">
-          <div class="gallery-overlay"><div class="gallery-caption">Permanent Roofline — Woodbury</div></div>
-        </div>
-        <div class="gallery-item ph-2">
-          <div class="gallery-overlay"><div class="gallery-caption">Holiday Scene — Eagan</div></div>
-        </div>
-        <div class="gallery-item ph-3">
-          <div class="gallery-overlay"><div class="gallery-caption">Security Lighting — Eden Prairie</div></div>
-        </div>
-        <div class="gallery-item ph-4">
-          <div class="gallery-overlay"><div class="gallery-caption">Game Day — Vikings Purple</div></div>
-        </div>
-        <div class="gallery-item ph-5">
-          <div class="gallery-overlay"><div class="gallery-caption">Accent Lighting — Stillwater</div></div>
-        </div>
-        <div class="gallery-item" style="background:linear-gradient(135deg,#0A1A30,#1A3A5A)">
-          <div class="gallery-overlay"><div class="gallery-caption">Architectural Lighting — Maple Grove</div></div>
-        </div>
-      </div>
-      <p style="margin-top:32px;color:#888;font-size:0.88rem;text-align:center;">
-        Browse more on our <a href="https://www.instagram.com/timbermen_lighting" target="_blank" style="color:var(--red);font-weight:600;">Instagram</a> — more installs posted there!
-      </p>
+<div class="gallery-grid">
+  <div class="gallery-item ph-1 fade-in" onclick="openLightbox(0)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Permanent Roofline — Woodbury</div>
     </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+  <div class="gallery-item ph-2 fade-in fade-in-delay-1" onclick="openLightbox(1)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Holiday Scene — Eagan</div>
+    </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+  <div class="gallery-item ph-3 fade-in fade-in-delay-2" onclick="openLightbox(2)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Security Lighting — Eden Prairie</div>
+    </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+  <div class="gallery-item ph-4 fade-in fade-in-delay-1" onclick="openLightbox(3)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Game Day — Vikings Purple</div>
+    </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+  <div class="gallery-item ph-5 fade-in fade-in-delay-2" onclick="openLightbox(4)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Accent Lighting — Stillwater</div>
+    </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+  <div class="gallery-item ph-6 fade-in fade-in-delay-3" onclick="openLightbox(5)">
+    <div class="ph-content"></div>
+    <div class="gallery-overlay">
+      <div class="gallery-caption">Architectural Lighting — Maple Grove</div>
+    </div>
+    <div class="gallery-expand">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+    </div>
+  </div>
+</div>
   </section>
-  <section class="cta-band">
+  <section class="cta-band fade-in">
     <h2>Want Your Home in the Gallery?</h2>
     <p>Book a complimentary consultation for a personalized quote and we'll design something worth showing off.</p>
     <a href="#" class="btn-white" onclick="showPage('contact')">Get Started Today</a>
+    <a href="tel:6124788428" class="btn-outline-white">Call (612) 478-8428</a>
   </section>
 </div>
 
 <!-- ═══════════════ CONTACT PAGE ═══════════════ -->
 <div id="page-contact" class="page">
-  <section class="section contact-section">
+  <section class="section contact-section fade-in">
     <div class="section-inner">
       <div class="section-eyebrow">Get In Touch</div>
       <h1 class="section-title">Start My Quote</h1>
@@ -1079,6 +1345,27 @@
   </div>
 </footer>
 
+<div class="floating-bar">
+  <a href="tel:6124788428" class="fb-icon">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+    </svg>
+    Call
+  </a>
+  <div class="fb-divider"></div>
+  <a href="#" onclick="showPage('contact');return false;" class="fb-quote">
+    Start My Quote
+    <span>Complimentary Consultation</span>
+  </a>
+  <div class="fb-divider"></div>
+  <a href="sms:6124788428" class="fb-icon">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    Text
+  </a>
+</div>
+
 <script>
   // Page navigation
   function showPage(id) {
@@ -1137,6 +1424,106 @@ function selectService(serviceName) {
       }
     });
   }
+  
+  function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// Progress bar
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('progress-bar').style.width = progress + '%';
+});
+
+// Fade in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Lightbox
+const photos = [
+  { bg: 'linear-gradient(135deg,#0D1B3E,#1A3A6A)' },
+  { bg: 'linear-gradient(135deg,#1A2D5A,#2A4A8A)' },
+  { bg: 'linear-gradient(135deg,#2A1A3A,#1A2D5A)' },
+  { bg: 'linear-gradient(135deg,#0D1B3E,#3A1A0A)' },
+  { bg: 'linear-gradient(135deg,#1A2D5A,#0A2A1A)' },
+  { bg: 'linear-gradient(135deg,#0A1A30,#1A3A5A)' },
+];
+let currentPhoto = 0;
+
+function openLightbox(index) {
+  currentPhoto = index;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function updateLightbox() {
+  document.getElementById('lightbox-placeholder').style.background = photos[currentPhoto].bg;
+}
+function nextPhoto() { currentPhoto = (currentPhoto + 1) % photos.length; updateLightbox(); }
+function prevPhoto() { currentPhoto = (currentPhoto - 1 + photos.length) % photos.length; updateLightbox(); }
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') nextPhoto();
+  if (e.key === 'ArrowLeft') prevPhoto();
+});
+
+// Animated counters
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      entry.target.classList.add('counted');
+      const target = parseInt(entry.target.getAttribute('data-target'));
+      const el = entry.target;
+      const suffix = el.textContent.replace(/[0-9]/g, '');
+      let current = 0;
+      const duration = 1500;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(current) + suffix;
+      }, 16);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-num[data-target], .astat-num[data-target]')
+  .forEach(el => counterObserver.observe(el));
+
 </script>
 </body>
+<div id="progress-bar"></div>
+
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div id="lightbox-placeholder"></div>
+  <div id="lightbox-nav">
+    <button onclick="prevPhoto()">← Prev</button>
+    <button onclick="nextPhoto()">Next →</button>
+  </div>
+</div>
+
 </html>
