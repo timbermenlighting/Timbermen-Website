@@ -287,6 +287,12 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
 .review-stars { color: #F5A623; font-size: 1rem; margin-bottom: 14px; }
 .review-text { color: rgba(255,255,255,0.9); font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px; font-style: italic; }
 .review-author { font-weight: 700; font-size: 0.85rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.06em; }
+@media (max-width: 900px) {
+  .contact-info-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 500px) {
+  .contact-info-grid { grid-template-columns: 1fr !important; }
+}
 
 </style>
 </head>
@@ -571,6 +577,7 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
     <div class="section-inner">
       <div class="section-eyebrow">Get In Touch</div>
       <h1 class="section-title">Start My Quote</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.6;max-width:700px;margin-bottom:48px;margin-top:12px;">Submit the form below to request a quote — we'll reach out to confirm your appointment. Want to lock in a time right now? Fill out the form and book directly using the calendar below.</p>
       <!-- FORM FIRST so it's visible without scrolling -->
       <div class="quote-form" style="margin-top:40px;">
         <h3>Quote Request</h3>
@@ -602,18 +609,33 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
           <button type="submit" class="form-submit">Send My Quote Request →</button>
         </form>
       </div>
+      <div style="background:rgba(255,255,255,0.06);border-radius:24px;overflow:hidden;margin-top:32px;">
+  <div style="padding:28px 32px 0;">
+    <h3 style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;text-transform:uppercase;color:var(--white);margin-bottom:6px;">Book a Consultation</h3>
+    <p style="color:rgba(255,255,255,0.55);font-size:0.88rem;margin-bottom:20px;">Pick a time that works for you — we'll come to your home.</p>
+  </div>
+  <iframe src="https://calendly.com/timbermenlighting/consultation?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=081530&text_color=ffffff&primary_color=C91E1E" style="width:100%;min-height:650px;border:none;"></iframe>
+</div>
+
       <!-- CONTACT INFO below form -->
-      <div class="contact-layout" style="margin-top:60px;">
-        <div class="contact-info">
-          <h3>Talk to a Lighting Expert</h3>
-          <p>We'll come to your home, walk through your options, and give you clear, honest pricing — no obligation, no pressure. Most consultations take about 30 minutes.</p>
-          <div class="contact-detail"><div class="contact-icon">📞</div><div class="contact-detail-text"><strong>Phone</strong><a href="tel:6124788428" style="color:rgba(255,255,255,0.75);text-decoration:none;">(612) 478-8428</a></div></div>
-          <div class="contact-detail"><div class="contact-icon">📍</div><div class="contact-detail-text"><strong>Service Area</strong>Twin Cities Metro — 10+ communities</div></div>
-          <div class="contact-detail"><div class="contact-icon">⏰</div><div class="contact-detail-text"><strong>Hours</strong>Mon–Sat: 9am-9pm<br>Sunday: By appointment</div></div>
-          <div class="contact-detail"><div class="contact-icon">⭐</div><div class="contact-detail-text"><strong>Rating</strong>5 Stars · 10+ Google Reviews</div></div>
-        </div>
-      </div>
-    </div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;" class="contact-info-grid">
+  <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:20px;display:flex;gap:12px;">
+    <div style="font-size:1.2rem;">📞</div>
+    <div><strong style="display:block;color:var(--white);font-size:0.85rem;margin-bottom:2px;">Phone</strong><a href="tel:6124788428" style="color:rgba(255,255,255,0.55);font-size:0.82rem;text-decoration:none;">(612) 478-8428</a></div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:20px;display:flex;gap:12px;">
+    <div style="font-size:1.2rem;">📍</div>
+    <div><strong style="display:block;color:var(--white);font-size:0.85rem;margin-bottom:2px;">Service Area</strong><span style="color:rgba(255,255,255,0.55);font-size:0.82rem;">Twin Cities Metro — 10+ communities</span></div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:20px;display:flex;gap:12px;">
+    <div style="font-size:1.2rem;">⏰</div>
+    <div><strong style="display:block;color:var(--white);font-size:0.85rem;margin-bottom:2px;">Hours</strong><span style="color:rgba(255,255,255,0.55);font-size:0.82rem;">Mon–Sat: 9am–9pm<br>Sunday: By appointment</span></div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:20px;display:flex;gap:12px;">
+    <div style="font-size:1.2rem;">⭐</div>
+    <div><strong style="display:block;color:var(--white);font-size:0.85rem;margin-bottom:2px;">Rating</strong><span style="color:rgba(255,255,255,0.55);font-size:0.82rem;">5 Stars · 10+ Google Reviews</span></div>
+  </div>
+</div>
   </section>
 </div>
 
