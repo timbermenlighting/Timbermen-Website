@@ -224,6 +224,23 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
   .about-stats { grid-template-columns: 1fr 1fr; }
   .contact-info-grid { grid-template-columns: 1fr; }
 }
+.effects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+.effect-card {
+  position: relative; border-radius: 16px; overflow: hidden;
+  aspect-ratio: 1/1; cursor: pointer;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.effect-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+.effect-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) { .effects-grid { grid-template-columns: repeat(2, 1fr); } }
+
 </style>
 </head>
 <body>
@@ -268,7 +285,23 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
       </div>
     </div>
   </section>
-
+<section class="section fade-in" style="background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2499.jpeg'); background-size: cover; background-position: center;">
+  <div class="section-inner">
+    <div class="section-eyebrow">See What's Possible</div>
+    <h2 class="section-title" style="color:var(--white);">Light Effects & Patterns</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.6;max-width:560px;margin-bottom:56px;">Every installation comes with full app control — choose from dozens of effects, colors, and scenes for any occasion.</p>
+    <div class="effects-grid">
+      <div class="effect-card"><img src="IsoFade.gif" alt="IsoFade effect"></div>
+      <div class="effect-card"><img src="Gradient.gif" alt="Gradient effect"></div>
+      <div class="effect-card"><img src="Spotlight.gif" alt="Spotlight effect"></div>
+      <div class="effect-card"><img src="Stretch.gif" alt="Stretch effect"></div>
+      <div class="effect-card"><img src="Flicker.gif" alt="Flicker effect"></div>
+      <div class="effect-card"><img src="Sway.gif" alt="Sway effect"></div>
+      <div class="effect-card"><img src="Fireworks.gif" alt="Fireworks effect"></div>
+      <div class="effect-card"><img src="Fade.gif" alt="Fade effect"></div>
+    </div>
+  </div>
+</section>
   <section class="section why-section fade-in">
     <div class="section-inner text-center">
       <div class="section-eyebrow">Our Process</div>
