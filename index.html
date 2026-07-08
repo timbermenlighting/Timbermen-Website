@@ -8,6 +8,7 @@
 <meta property="og:image" content="https://timbermen-lighting.com/Untitled298_20260603164602.jpeg?v=2">
 <meta property="og:url" content="https://timbermen-lighting.com">
 <link rel="preload" as="image" href="IMG_2471.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <title>Timbermen Lighting — Permanent Architectural Lighting, Minnesota</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
@@ -250,7 +251,28 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
 .ef-fireworks { background: linear-gradient(135deg,#2a1a0a,#3a0a1a); }
 .ef-fade { background: linear-gradient(135deg,#0a1a3a,#2a2a4a); }
 @media (max-width: 900px) { .effects-grid { grid-template-columns: repeat(2, 1fr); } }
-
+#service-map {
+  width: 100%; height: 480px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  z-index: 1;
+}
+.region-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; }
+.region-card {
+  background: rgba(255,255,255,0.06); border-radius: 16px; padding: 20px 22px;
+  border-left: 3px solid var(--red);
+}
+.region-name { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--white); margin-bottom: 6px; letter-spacing: 0.04em; }
+.region-cities { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.6; }
+.area-note { margin-top: 24px; color: rgba(255,255,255,0.45); font-size: 0.9rem; text-align: center; }
+.area-note a { color: var(--red); font-weight: 600; text-decoration: none; }
+@media (max-width: 900px) {
+  .region-grid { grid-template-columns: 1fr 1fr; }
+  #service-map { height: 380px; }
+}
+@media (max-width: 500px) {
+  .region-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -387,7 +409,36 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
       </div>
     </div>
   </section>
+<section class="section fade-in" style="background:#081530;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Where We Work</div>
+    <h2 class="section-title" style="color:var(--white);">Serving The Twin Cities Metro</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.6;max-width:620px;margin-bottom:40px;">Everywhere within 50 miles of Minneapolis &amp; St. Paul — if you're in the metro, we've got you covered.</p>
 
+    <div id="service-map"></div>
+
+    <div class="region-grid">
+      <div class="region-card">
+        <div class="region-name">North Metro</div>
+        <div class="region-cities">Blaine · Coon Rapids · Andover · Anoka · Ham Lake · Champlin · Brooklyn Park · Shoreview · White Bear Lake · Forest Lake</div>
+      </div>
+      <div class="region-card">
+        <div class="region-name">South Metro</div>
+        <div class="region-cities">Eagan · Apple Valley · Burnsville · Lakeville · Prior Lake · Savage · Rosemount · Shakopee · Farmington</div>
+      </div>
+      <div class="region-card">
+        <div class="region-name">East Metro</div>
+        <div class="region-cities">Woodbury · Stillwater · Oakdale · Maplewood · Cottage Grove · Hastings · Inver Grove Heights</div>
+      </div>
+      <div class="region-card">
+        <div class="region-name">West Metro</div>
+        <div class="region-cities">Maple Grove · Plymouth · Minnetonka · Eden Prairie · Wayzata · Chanhassen · Chaska · Edina · Bloomington</div>
+      </div>
+    </div>
+
+    <p class="area-note">Don't see your city? We cover everywhere within 50 miles of the Twin Cities — <a href="contact.html">reach out and ask!</a></p>
+  </div>
+</section>
   <section class="cta-band fade-in">
     <h2>Ready to Light Up Your Home?</h2>
     <p>Book a complimentary in-home consultation for a personalized quote. No pressure, clear pricing, real trade-level work.</p>
@@ -493,6 +544,36 @@ function toggleFaq(btn) {
   document.querySelectorAll(".faq-question").forEach(q => q.classList.remove("open"));
   if (!isOpen) { answer.classList.add("open"); btn.classList.add("open"); }
 }
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const mapCenter = [44.9658, -93.1775];
+const serviceMap = L.map('service-map', {
+  scrollWheelZoom: false,
+  dragging: true,
+  zoomControl: true
+}).setView(mapCenter, 8);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 18
+}).addTo(serviceMap);
+
+L.circle(mapCenter, {
+  radius: 80467,
+  color: '#C91E1E',
+  weight: 2.5,
+  fillColor: '#C91E1E',
+  fillOpacity: 0.22
+}).addTo(serviceMap);
+
+L.circleMarker(mapCenter, {
+  radius: 7,
+  color: '#ffffff',
+  weight: 2,
+  fillColor: '#C91E1E',
+  fillOpacity: 1
+}).addTo(serviceMap).bindPopup('<b>Timbermen Lighting</b><br>Serving the Twin Cities Metro');
 </script>
 </body>
 </html>
