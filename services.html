@@ -8,6 +8,32 @@
 <meta property="og:image" content="https://timbermen-lighting.com/Untitled298_20260603164602.jpg">
 <meta property="og:url" content="https://timbermen-lighting.com/services.html">
 <title>Services — Timbermen Lighting</title>
+.compare-table {
+  margin-top: 48px; border-radius: 20px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.compare-row {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.compare-row:last-child { border-bottom: none; }
+.compare-row > div { padding: 18px 20px; font-size: 0.92rem; display: flex; align-items: center; }
+.compare-head { background: rgba(255,255,255,0.08); }
+.compare-head > div {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.compare-feature { color: rgba(255,255,255,0.75); font-weight: 600; }
+.col-tl { background: rgba(201,30,30,0.12); color: var(--white); font-weight: 600; }
+.compare-head .col-tl { background: var(--red); color: var(--white); justify-content: center; }
+.col-diy { color: rgba(255,255,255,0.5); }
+.compare-head .col-diy { color: rgba(255,255,255,0.6); justify-content: center; }
+.check { color: #4ade80; margin-right: 8px; font-weight: 700; }
+.cross { color: rgba(255,255,255,0.3); margin-right: 8px; font-weight: 700; }
+@media (max-width: 800px) {
+  .compare-row > div { padding: 14px 10px; font-size: 0.78rem; }
+  .compare-head > div { font-size: 0.85rem; }
+}
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
 :root {
@@ -315,7 +341,55 @@ footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 2
       </div>
     </div>
   </section>
+<section class="section fade-in" style="background:#081530;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Professional?</div>
+    <h2 class="section-title" style="color:var(--white);">Timbermen vs. DIY Kits</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.6;max-width:560px;">Thinking about a DIY kit? Here's the honest comparison.</p>
 
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div></div>
+        <div class="col-tl">Timbermen</div>
+        <div class="col-diy">DIY Kits</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Professional installation</div>
+        <div class="col-tl"><span class="check">✓</span> Included</div>
+        <div class="col-diy"><span class="cross">✕</span> You're on the ladder</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Hidden by day</div>
+        <div class="col-tl"><span class="check">✓</span> Built-in look</div>
+        <div class="col-diy"><span class="cross">✕</span> Visible strips &amp; wires</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Built for MN winters</div>
+        <div class="col-tl"><span class="check">✓</span> Pro-grade install &amp; wiring</div>
+        <div class="col-diy"><span class="cross">✕</span> Adhesive clips fail in freeze-thaw</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Lifespan</div>
+        <div class="col-tl"><span class="check">✓</span> 50,000+ hours</div>
+        <div class="col-diy"><span class="cross">✕</span> Often 1–3 seasons</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Support</div>
+        <div class="col-tl"><span class="check">✓</span> Local team, we come back</div>
+        <div class="col-diy"><span class="cross">✕</span> Manufacturer warranty only</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">App control &amp; scenes</div>
+        <div class="col-tl"><span class="check">✓</span> Set up for you</div>
+        <div class="col-diy"><span class="cross">✕</span> Figure it out yourself</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="contact.html" class="btn-primary">Get The Professional Look →</a>
+    </div>
+  </div>
+</section>
   <section class="cta-band fade-in">
     <h2>Let's Light Up Your Home</h2>
     <p>We'll come to you, answer your questions, and provide clear pricing — no obligation.</p>
