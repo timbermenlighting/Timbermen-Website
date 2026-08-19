@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Services — Timbermen Lighting">
+<meta property="og:description" content="Permanent architectural lighting, security lighting, holiday lighting, game day lighting and more for Twin Cities homeowners.">
+<meta property="og:image" content="https://timbermen-lighting.com/Untitled298_20260603164602.jpg">
+<meta property="og:url" content="https://timbermen-lighting.com/services.html">
+<title>Services — Timbermen Lighting</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+:root {
+  --navy: #002962; --navy-mid: #001C42; --red: #C91E1E; --red-light: #B31E1E;
+  --white: #FFFFFF; --off-white: #F5F5F0; --light-gray: #EAEAEA;
+  --text: #1A1A1A; --font-display: 'Barlow Condensed', sans-serif; --font-body: 'Barlow', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text); background: #081530; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 68px; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo img { height: 46px; width: auto; object-fit: contain; }
+.nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-family: var(--font-body); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.nav-cta { background: var(--red) !important; color: var(--white) !important; border-radius: 4px; padding: 8px 18px !important; }
+.nav-cta:hover { background: var(--red-light) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+.mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--navy); z-index: 99; padding: 24px; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--white); }
+.mobile-menu .m-cta { margin-top: 20px; background: var(--red); color: var(--white) !important; text-align: center; border-radius: 50px; border: none; padding: 16px !important; }
+.page-wrap { padding-top: 68px; }
+.hero { position: relative; min-height: calc(100vh - 68px); display: flex; align-items: center; overflow: hidden; background: var(--navy); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: rgba(10,20,48,0.62); }
+.hero-content { position: relative; z-index: 2; max-width: 720px; padding: 80px 48px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--red); font-family: var(--font-body); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px; }
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
+.hero-headline { font-family: var(--font-display); font-weight: 900; font-size: clamp(4rem, 12vw, 10rem); line-height: 0.92; color: var(--white); text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 28px; }
+.hero-headline em { font-style: normal; color: var(--white); }
+.hero-sub { color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6; max-width: 520px; margin-bottom: 44px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary { background: var(--red); color: var(--white); border: none; padding: 14px 28px; border-radius: 50px; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--red-light); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); padding: 13px 30px; border-radius: 50px; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s; }
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+.hero-stats { display: flex; gap: 48px; margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.12); flex-wrap: wrap; }
+.stat-num { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; color: var(--white); line-height: 1; }
+.stat-label { color: rgba(255,255,255,0.5); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+.section { padding: 96px 24px; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--red); font-family: var(--font-body); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 12px; }
+.section-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--red); }
+.section-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 5vw, 3.6rem); text-transform: uppercase; line-height: 1; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 16px; }
+.section-title.light { color: var(--white); }
+.bg-off .section-title { color: var(--white); }
+.bg-off .section-sub { color: rgba(255,255,255,0.7); }
+.section-sub { color: #555; font-size: 1.05rem; line-height: 1.6; max-width: 560px; }
+.section-sub.light { color: rgba(255,255,255,0.65); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 56px; background: transparent; border: none; }
+.service-card { background: rgba(255,255,255,0.15); padding: 40px 36px; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; border-radius: 50px; }
+.service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: var(--red); transition: height 0.3s; }
+.service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.1); }
+.service-card:hover::before { height: 100%; }
+.service-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
+.service-name { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; text-transform: uppercase; color: var(--white); margin-bottom: 10px; letter-spacing: 0.02em; }
+.service-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; line-height: 1.6; }
+.reviews-section { background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2499.jpeg'); background-size: cover; background-position: center; }
+.reviews-section .section-title { color: var(--white); }
+.reviews-section .section-eyebrow { color: var(--red); }
+.why-section { position: relative; background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2486.jpeg'); background-size: cover; background-position: center; }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 56px; background: transparent; border: none; }
+.why-card { background: rgba(255,255,255,0.15); padding: 36px 30px; transition: background 0.2s; border-radius: 50px; }
+.why-card:hover { background: rgba(255,255,255,0.06); }
+.why-number { font-family: var(--font-display); font-weight: 900; font-size: 3.5rem; color: var(--white); line-height: 1; margin-bottom: 14px; opacity: 0.7; }
+.why-title { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; color: var(--white); margin-bottom: 8px; letter-spacing: 0.06em; }
+.why-text { color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.6; }
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 56px; }
+.about-img-wrap { position: relative; }
+.about-img-placeholder { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+.about-img-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-badge { position: absolute; bottom: -20px; right: -20px; background: var(--red); color: var(--white); padding: 20px 24px; border-radius: 16px; font-family: var(--font-display); font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; text-align: center; line-height: 1.2; }
+.about-badge strong { display: block; font-size: 2rem; }
+.about-text p { color: #555; font-size: 1rem; line-height: 1.7; margin-bottom: 20px; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.astat { border-left: 3px solid var(--red); padding-left: 16px; }
+.astat-num { font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--navy); }
+.astat-label { font-size: 0.82rem; color: #888; text-transform: uppercase; letter-spacing: 0.08em; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 56px; }
+.gallery-item { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 1/1; background: var(--navy-mid); border-radius: 12px; }
+.gallery-item:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); display: block; }
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,15,40,0.85) 0%, rgba(0,15,40,0.2) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; opacity: 0; transition: opacity 0.35s ease; }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-caption { font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; color: var(--white); letter-spacing: 0.06em; transform: translateY(8px); transition: transform 0.35s ease; }
+.gallery-item:hover .gallery-caption { transform: translateY(0); }
+.gallery-expand { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.35s; }
+.gallery-item:hover .gallery-expand { opacity: 1; }
+.gallery-expand svg { width: 14px; height: 14px; stroke: white; }
+.gallery-item.ph-1 { background: linear-gradient(135deg,#0D1B3E,#1A3A6A); }
+.gallery-item.ph-2 { background: linear-gradient(135deg,#1A2D5A,#2A4A8A); }
+.gallery-item.ph-3 { background: linear-gradient(135deg,#0D1B3E,#3A1A0A); }
+.gallery-item.ph-4 { background: linear-gradient(135deg,#1A2D5A,#0A2A1A); }
+.gallery-item.ph-5 { background: linear-gradient(135deg,#2A1A3A,#1A2D5A); }
+.gallery-item.ph-6 { background: linear-gradient(135deg,#0A1A30,#1A3A5A); }
+.quote-form { background: rgba(255,255,255,0.06); padding: 44px 40px; border-radius: 50px; }
+.quote-form h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+.quote-form p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 28px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid rgba(255,255,255,0.35); border-radius: 50px; font-family: var(--font-body); font-size: 0.95rem; color: var(--white); background: rgba(255,255,255,0.1); transition: border-color 0.2s, box-shadow 0.2s; appearance: none; }
+.form-group textarea { border-radius: 20px; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--white); box-shadow: 0 0 0 3px rgba(255,255,255,0.1); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group input::placeholder, .form-group select::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+.form-submit { width: 100%; padding: 16px; background: var(--red); color: var(--white); border: none; border-radius: 50px; cursor: pointer; font-family: var(--font-body); font-weight: 700; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; margin-top: 8px; }
+.form-submit:hover { background: var(--red-light); }
+.form-success { display: none; text-align: center; padding: 32px; background: #eefbf4; border-radius: 20px; border: 1px solid #9de0bf; }
+.form-success h4 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; color: #1a6b3c; margin-bottom: 8px; }
+.form-success p { color: #1a5c3a; font-size: 0.95rem; }
+.cta-band { background: var(--red); padding: 72px 24px; text-align: center; }
+.cta-band h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5vw, 3.4rem); text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+.cta-band p { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 32px; }
+.cta-band .btn-white { background: var(--white); color: var(--red); border: none; padding: 15px 36px; border-radius: 50px; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; margin: 6px 8px; }
+.cta-band .btn-white:hover { opacity: 0.88; }
+.cta-band .btn-outline-white { background: #8B1A0E; color: var(--white); border: 2px solid #8B1A0E; padding: 13px 34px; border-radius: 50px; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s; margin: 6px 8px; }
+.cta-band .btn-outline-white:hover { border-color: var(--white); }
+footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 60px 24px 32px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+.footer-brand img { height: 50px; margin-bottom: 16px; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.6; max-width: 240px; }
+.footer-col h4 { font-family: var(--font-body); font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--white); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; }
+.footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-bottom a:hover { color: var(--white); }
+.about-section { background: #081530; }
+.about-section .section-title { color: var(--white); }
+.about-section .section-eyebrow { color: var(--red); }
+.about-section .about-text p { color: rgba(255,255,255,0.75); }
+.about-section .about-text a { color: var(--red); }
+.about-section .astat-num { color: var(--white); }
+.about-section .astat-label { color: rgba(255,255,255,0.55); }
+.about-section .astat { border-left: 3px solid var(--red); }
+.gallery-section { background: #081530; }
+.gallery-section .section-title { color: var(--white); }
+.gallery-section .section-eyebrow { color: var(--red); }
+.gallery-section .section-sub { color: rgba(255,255,255,0.7); }
+.contact-section { background: #081530; }
+.contact-section .section-title { color: var(--white); }
+.contact-section .section-eyebrow { color: var(--red); }
+.mt-8 { margin-top: 8px; }
+.text-center { text-align: center; }
+.text-center .section-sub { margin: 0 auto; }
+.bg-off { background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.82)), url('IMG_2489.png'); background-size: cover; background-position: center; }
+.service-btn { display: inline-block; margin-top: 20px; color: var(--white); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; background: var(--red); padding: 10px 20px; border-radius: 50px; transition: opacity 0.2s; }
+.service-btn:hover { opacity: 0.7; }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 4px 0; }
+.faq-question { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--white); text-align: left; gap: 16px; }
+.faq-question span { font-size: 1.4rem; color: var(--red); flex-shrink: 0; transition: transform 0.3s; }
+.faq-question.open span { transform: rotate(45deg); }
+.faq-answer { display: none; padding: 0 0 20px 0; color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; }
+.faq-answer.open { display: block; }
+.floating-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #001a40; padding: 14px 20px 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; box-shadow: 0 -2px 30px rgba(0,0,0,0.5); border-top: 1px solid rgba(255,255,255,0.06); }
+.fb-icon { display: flex; flex-direction: column; align-items: center; color: rgba(255,255,255,0.6); text-decoration: none; font-family: var(--font-body); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; gap: 5px; flex: 1; transition: color 0.2s; }
+.fb-icon svg { width: 22px; height: 22px; }
+.fb-icon:hover { color: var(--white); }
+.fb-quote { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--red); color: var(--white) !important; text-decoration: none; padding: 12px 28px; border-radius: 50px; flex: 2.5; text-align: center; font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 3px; box-shadow: 0 4px 16px rgba(201,30,30,0.4); transition: background 0.2s, transform 0.15s, box-shadow 0.2s; }
+.fb-quote:hover { background: var(--red-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,30,30,0.5); }
+.fb-quote span { font-size: 0.62rem; color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+.fb-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+@media (min-width: 901px) { .floating-bar { display: none; } }
+@media (max-width: 900px) { body { padding-bottom: 90px; } }
+#progress-bar { position: fixed; top: 0; left: 0; z-index: 999; height: 3px; width: 0%; background: linear-gradient(to right, var(--red), #ff6b6b); transition: width 0.1s linear; box-shadow: 0 0 8px rgba(201,30,30,0.6); }
+.fade-in { opacity: 0; transform: translateY(32px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+#lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,10,30,0.95); align-items: center; justify-content: center; flex-direction: column; backdrop-filter: blur(8px); padding: 24px; }
+#lightbox.open { display: flex; }
+#lightbox-placeholder { width: min(600px, 90vw); height: min(400px, 50vh); border-radius: 12px; }
+#lightbox-close { position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; cursor: pointer; color: white; font-size: 1.2rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+#lightbox-close:hover { background: rgba(255,255,255,0.2); }
+#lightbox-nav { display: flex; gap: 12px; margin-top: 16px; }
+#lightbox-nav button { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; transition: background 0.2s; }
+#lightbox-nav button:hover { background: rgba(255,255,255,0.15); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 48px; }
+.review-card { background: rgba(255,255,255,0.15); border: none; padding: 28px; border-radius: 50px; transition: box-shadow 0.2s; }
+.review-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+.review-stars { color: #F5A623; font-size: 1rem; margin-bottom: 14px; }
+.review-text { color: rgba(255,255,255,0.9); font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px; font-style: italic; }
+.review-author { font-weight: 700; font-size: 0.85rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.06em; }
+.contact-info-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 48px; }
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-content { padding: 60px 24px; }
+  .about-layout { grid-template-columns: 1fr; gap: 40px; }
+  .about-badge { bottom: -12px; right: 12px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-item:first-child { grid-column: span 2; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-info-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hero-stats { gap: 28px; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item:first-child { grid-column: span 1; }
+  .services-grid { grid-template-columns: 1fr; }
+  .quote-form { padding: 28px 20px; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .contact-info-grid { grid-template-columns: 1fr; }
+}
+.effects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+.effect-card {
+  position: relative; border-radius: 16px; overflow: hidden;
+  aspect-ratio: 1/1; cursor: pointer;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.effect-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+.effect-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) { .effects-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.compare-table { margin-top: 48px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+.compare-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.compare-row:last-child { border-bottom: none; }
+.compare-row > div { padding: 18px 20px; font-size: 0.92rem; display: flex; align-items: center; }
+.compare-head { background: rgba(255,255,255,0.08); }
+.compare-head > div { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); }
+.compare-feature { color: rgba(255,255,255,0.9); font-weight: 600; }
+.col-tl { background: rgba(201,30,30,0.12); color: var(--white); font-weight: 600; }
+.compare-head .col-tl { background: var(--red); color: var(--white); justify-content: center; }
+.col-diy { color: rgba(255,255,255,0.75); }
+.compare-head .col-diy { justify-content: center; }
+.check { color: #4ade80; margin-right: 8px; font-weight: 700; }
+.cross { color: rgba(255,255,255,0.4); margin-right: 8px; font-weight: 700; }
+@media (max-width: 800px) {
+  .compare-row > div { padding: 14px 10px; font-size: 0.78rem; }
+  .compare-head > div { font-size: 0.85rem; }
+}
+
+
+/* ══════════ TWINKLING LIGHTS — added ══════════ */
+.twinkle-field { position:absolute; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+.twinkle-field.global { position:fixed; z-index:-1; }
+.hero .twinkle-field { z-index:1; }
+.twinkle {
+  position:absolute; border-radius:50%;
+  background:#FFE9B0;
+  box-shadow:0 0 6px 2px rgba(255,233,176,.8), 0 0 14px 6px rgba(255,180,80,.35);
+  animation: twinkle-pulse ease-in-out infinite;
+}
+@keyframes twinkle-pulse {
+  0%,100%{ opacity:.15; transform:scale(.7); }
+  50%{ opacity:1; transform:scale(1.15); }
+}
+.hero, .why-section, .reviews-section, .cta-band, footer,
+.about-section, .gallery-section, .contact-section {
+  position: relative; z-index: 0; overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce){ .twinkle{ animation:none !important; } }
+
+/* ══════════ GLASS PILL BUTTONS + NAV + FLOATING BAR — added ══════════ */
+nav {
+  background: rgba(0,41,98,.55) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  transition: background .3s ease;
+}
+nav.nav-scrolled { background: rgba(0,41,98,.82) !important; }
+
+.floating-bar {
+  background: rgba(0,26,64,.55) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.btn-primary, .btn-outline, .btn-white, .btn-outline-white,
+.nav-cta, .m-cta, .fb-quote {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease !important;
+}
+.btn-primary::after, .btn-outline::after, .btn-white::after, .btn-outline-white::after,
+.nav-cta::after, .m-cta::after, .fb-quote::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform .6s ease;
+  pointer-events: none;
+}
+.btn-primary:hover::after, .btn-outline:hover::after, .btn-white:hover::after, .btn-outline-white:hover::after,
+.nav-cta:hover::after, .m-cta:hover::after, .fb-quote:hover::after {
+  transform: translateX(130%);
+}
+
+.btn-primary, .nav-cta, .m-cta, .fb-quote {
+  background: linear-gradient(135deg, rgba(201,30,30,.6), rgba(179,30,30,.42)) !important;
+  border: 1px solid rgba(255,255,255,.3) !important;
+  box-shadow: 0 8px 22px -8px rgba(201,30,30,.5), inset 0 1px 0 rgba(255,255,255,.35) !important;
+}
+.btn-primary:hover, .nav-cta:hover, .m-cta:hover, .fb-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -8px rgba(201,30,30,.6), inset 0 1px 0 rgba(255,255,255,.45) !important;
+}
+
+.btn-outline {
+  background: rgba(255,255,255,.10) !important;
+  border: 1.5px solid rgba(255,255,255,.4) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,.16) !important;
+  border-color: rgba(255,255,255,.6) !important;
+}
+
+.btn-white {
+  background: rgba(255,255,255,.78) !important;
+  border: 1px solid rgba(255,255,255,.85) !important;
+  box-shadow: 0 8px 22px -10px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.9);
+}
+.btn-white:hover { background: rgba(255,255,255,.92) !important; }
+
+.btn-outline-white {
+  background: rgba(255,255,255,.12) !important;
+  border: 1.5px solid rgba(255,255,255,.5) !important;
+  color: var(--white) !important;
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,.2) !important;
+  border-color: rgba(255,255,255,.7) !important;
+}
+
+.nav-cta { border-radius: 999px !important; }
+
+@media (prefers-reduced-motion: reduce){
+  .btn-primary::after, .btn-outline::after, .btn-white::after, .btn-outline-white::after,
+  .nav-cta::after, .m-cta::after, .fb-quote::after { transition: none; }
+}
+
+/* ══════════ GLASS CARDS, ICON CHIPS & IN-CARD BUTTONS — added ══════════ */
+.service-card, .why-card, .review-card, .quote-form {
+  background: linear-gradient(155deg, rgba(255,255,255,.20), rgba(255,255,255,.05)) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.22) !important;
+  box-shadow: 0 10px 30px -12px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease !important;
+}
+.service-card:hover, .why-card:hover, .review-card:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(155deg, rgba(255,255,255,.26), rgba(255,255,255,.08)) !important;
+  border-color: rgba(255,255,255,.34) !important;
+  box-shadow: 0 16px 38px -14px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+.contact-icon, .compare-head {
+  background: rgba(255,255,255,.14) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.25) !important;
+}
+
+.service-icon {
+  display: inline-flex !important;
+  align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,.16);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4);
+  font-size: 1.6rem !important;
+  color: rgba(255,255,255,.92);
+}
+
+.service-btn {
+  display: inline-flex !important;
+  align-items: center; gap: 6px;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(201,30,30,.62), rgba(179,30,30,.44)) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.3) !important;
+  border-radius: 999px !important;
+  padding: 10px 20px !important;
+  color: var(--white) !important;
+  box-shadow: 0 6px 18px -8px rgba(201,30,30,.5), inset 0 1px 0 rgba(255,255,255,.3);
+  transition: transform .2s ease, box-shadow .2s ease !important;
+}
+.service-btn::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.5) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform .6s ease;
+  pointer-events: none;
+}
+.service-btn:hover {
+  opacity: 1 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -8px rgba(201,30,30,.6), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.service-btn:hover::after { transform: translateX(130%); }
+
+@media (prefers-reduced-motion: reduce){
+  .service-card, .why-card, .review-card, .service-btn { transition: none !important; }
+}
+
+/* ══════════ FLOATING PILL NAV + PILL FLOATING BAR — added ══════════ */
+nav {
+  top: 14px !important;
+  left: 14px !important;
+  right: 14px !important;
+  border-radius: 999px !important;
+  padding: 0 30px !important;
+}
+.floating-bar {
+  bottom: 14px !important;
+  left: 14px !important;
+  right: 14px !important;
+  border-radius: 999px !important;
+}
+.page-wrap { padding-top: 100px !important; }
+.hero { min-height: calc(100vh - 100px) !important; }
+@media (max-width: 900px) {
+  body { padding-bottom: 112px !important; }
+}
+
+/* ══════════ TWINKLE COVERAGE FIX — bg-off & one-off photo sections ══════════ */
+.bg-off { position: relative; z-index: 0; overflow: hidden; }
+</style>
+</head>
+<body>
+<div class="twinkle-field global" data-count="60" aria-hidden="true"></div>
+<div id="progress-bar"></div>
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div id="lightbox-placeholder"></div>
+  <div id="lightbox-nav"><button onclick="prevPhoto()">← Prev</button><button onclick="nextPhoto()">Next →</button></div>
+</div>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Timbermen Lighting" style="height:86px;"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="nav-cta">Start My Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+  <a href="contact.html" onclick="closeMenu()" class="m-cta">Start My Quote</a>
+</div>
+
+<div class="page-wrap">
+  <section class="section bg-off fade-in">
+<div class="twinkle-field" data-count="20" aria-hidden="true"></div>
+    <div class="section-inner">
+      <div class="section-eyebrow">What We Offer</div>
+      <h1 class="section-title">Permanent Architectural<br>Lighting Services</h1>
+      <p class="section-sub">One craft, done perfectly. Every service below is designed to make your home shine — safely, permanently, and on your schedule.</p>
+      <div class="services-grid" style="margin-top:56px;">
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M9 18h6M10 21h4M12 3a6.5 6.5 0 0 0-3.5 12c.6.5 1 1.3 1 2h5c0-.7.4-1.5 1-2A6.5 6.5 0 0 0 12 3z"/></svg></span><div class="service-name">Permanent Architectural Lighting</div><div class="service-desc">Our flagship service. Recessed LED fixtures installed along your roofline, fascia, and eaves — completely hidden by day, stunning by night. Engineered for Minnesota freeze-thaw cycles and rated for 50,000+ hours.</div><a href="contact.html" class="service-btn">Start My Quote →</a></div>
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div class="service-name">Security Lighting</div><div class="service-desc">Bright, motion-aware illumination placed at entry points, garages, and dark corners. Deters intruders and gives you peace of mind year-round — without the look of construction-site floodlights.</div><a href="contact.html" class="service-btn">Start My Quote →</a></div>
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M12 2.5 8 8.5h2.2L7 14h2.6L6.5 20h11L14.5 14h2.6L13.8 8.5H16z"/><path d="M12 20v2"/></svg></span><div class="service-name">Holiday Lighting</div><div class="service-desc">Never climb a ladder again. Our permanent system handles every holiday — Christmas, Halloween, Fourth of July — with programmable color scenes and custom schedules. One install, every celebration.</div><a href="contact.html" class="service-btn">Start My Quote →</a></div>
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><ellipse cx="12" cy="12" rx="9.5" ry="5.5"/><path d="M4.5 12h15"/><path d="M8 9.8v4.4M11 9.3v5.4M14 9.3v5.4M17 9.8v4.4"/></svg></span><div class="service-name">Game Day Lighting</div><div class="service-desc">Custom color scenes built around your team's schedule. Switch to Vikings purple, Wild green, or Twins red with one tap on game day. Makes every kickoff feel like a block party.</div><a href="contact.html" class="service-btn">Start My Quote →</a></div>
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1.1.9-2 2-2h2.3c1.8 0 3.2-1.4 3.2-3.2C20.5 6.8 16.8 3 12 3z"/><circle cx="7.5" cy="10.5" r="1.1"/><circle cx="8.5" cy="14.5" r="1.1"/><circle cx="12.5" cy="7.5" r="1.1"/><circle cx="16" cy="9" r="1.1"/></svg></span><div class="service-name">Accent Lighting</div><div class="service-desc">Highlight your home's best architectural features — columns, dormers, stonework, landscaping. Elegant, custom illumination that adds depth and drama after dark.</div><a href="contact.html" class="service-btn">Start My Quote →</a></div>
+        <div class="service-card"><span class="service-icon"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:block"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="11" y1="18" x2="13" y2="18"/></svg></span><div class="service-name">Smart Control Systems With Installations</div><div class="service-desc">Every installation pairs with an intuitive app. Set schedules, create scenes, adjust brightness, and control your lights from anywhere. Works with most smart home platforms.</div></div>
+      </div>
+    </div>
+  </section>
+<section class="section fade-in" style="background-image: linear-gradient(rgba(10,20,48,0.75), rgba(10,20,48,0.75)), url('IMG_2604.jpeg'); background-size: cover; background-position: center; position:relative;z-index:0;overflow:hidden;">
+<div class="twinkle-field" data-count="24" aria-hidden="true"></div>
+  <div class="section-inner">
+    <div class="section-eyebrow">See What's Possible</div>
+    <h2 class="section-title" style="color:var(--white);">Light Effects & Patterns</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.6;max-width:560px;margin-bottom:56px;">Every installation comes with full app control — choose from dozens of effects, colors, and scenes for any occasion.</p>
+    <div class="effects-grid">
+      <div class="effect-card"><img src="IsoFade.gif" alt="IsoFade effect"></div>
+      <div class="effect-card"><img src="Gradient.gif" alt="Gradient effect"></div>
+      <div class="effect-card"><img src="Spotlight.gif" alt="Spotlight effect"></div>
+      <div class="effect-card"><img src="Stretch.gif" alt="Stretch effect"></div>
+      <div class="effect-card"><img src="Flicker.gif" alt="Flicker effect"></div>
+      <div class="effect-card"><img src="Sway.gif" alt="Sway effect"></div>
+      <div class="effect-card"><img src="Fireworks.gif" alt="Fireworks effect"></div>
+      <div class="effect-card"><img src="Fade.gif" alt="Fade effect"></div>
+    </div>
+  </div>
+</section>
+  <section class="section why-section fade-in">
+<div class="twinkle-field" data-count="22" aria-hidden="true"></div>
+    <div class="section-inner text-center">
+      <div class="section-eyebrow">Our Process</div>
+      <h2 class="section-title light">From Call to Completion</h2>
+      <p class="section-sub light">Four clear steps, no surprises.</p>
+      <div class="why-grid" style="margin-top:48px;text-align:left;">
+        <div class="why-card"><div class="why-number">01</div><div class="why-title">Complimentary Consultation For A Personalized Quote</div><div class="why-text">We visit your home, assess the roofline and architecture, and give you clear pricing with zero pressure.</div></div>
+        <div class="why-card"><div class="why-number">02</div><div class="why-title">Custom Design</div><div class="why-text">We map your exact fixture layout and color zones so you can see the plan before a single wire is run.</div></div>
+        <div class="why-card"><div class="why-number">03</div><div class="why-title">Clean Install</div><div class="why-text">Our crew arrives on schedule, protects your property, and finishes the job with a full walkthrough.</div></div>
+        <div class="why-card"><div class="why-number">04</div><div class="why-title">You're in Control</div><div class="why-text">We set up your app, show you every feature, and leave contact info for anything that comes up later.</div></div>
+      </div>
+    </div>
+  </section>
+
+<section class="section fade-in" style="background:#081530;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Professional?</div>
+    <h2 class="section-title" style="color:var(--white);">Timbermen vs. DIY Kits</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.6;max-width:560px;">Thinking about a DIY kit? Here's the honest comparison.</p>
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div></div>
+        <div class="col-tl">Timbermen</div>
+        <div class="col-diy">DIY Kits</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Professional installation</div>
+        <div class="col-tl"><span class="check">✓</span> Included</div>
+        <div class="col-diy"><span class="cross">✕</span> You're on the ladder</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Hidden by day</div>
+        <div class="col-tl"><span class="check">✓</span> Built-in look</div>
+        <div class="col-diy"><span class="cross">✕</span> Visible strips &amp; wires</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Built for MN winters</div>
+        <div class="col-tl"><span class="check">✓</span> Pro-grade install &amp; wiring</div>
+        <div class="col-diy"><span class="cross">✕</span> Adhesive clips fail in freeze-thaw</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Lifespan</div>
+        <div class="col-tl"><span class="check">✓</span> 50,000+ hours</div>
+        <div class="col-diy"><span class="cross">✕</span> Often 1–3 seasons</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">Support</div>
+        <div class="col-tl"><span class="check">✓</span> Local team, we come back</div>
+        <div class="col-diy"><span class="cross">✕</span> Manufacturer warranty only</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-feature">App control &amp; scenes</div>
+        <div class="col-tl"><span class="check">✓</span> Set up for you</div>
+        <div class="col-diy"><span class="cross">✕</span> Figure it out yourself</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="contact.html" class="btn-primary">Get The Professional Look →</a>
+    </div>
+  </div>
+</section>
+
+  <section class="cta-band fade-in">
+<div class="twinkle-field" data-count="14" aria-hidden="true"></div>
+    <h2>Let's Light Up Your Home</h2>
+    <p>We'll come to you, answer your questions, and provide clear pricing — no obligation.</p>
+    <a href="contact.html" class="btn-white">Start My Quote</a>
+    <a href="tel:6124788428" class="btn-outline-white">Call Us Now</a>
+  </section>
+</div>
+
+<footer>
+<div class="twinkle-field" data-count="16" aria-hidden="true"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Timbermen Lighting" style="height:160px;margin-bottom:0px;">
+      <div style="font-family:var(--font-body);font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:14px;">Minnesota · Permanent Lighting</div>
+      <p>Built for Twin Cities homeowners who want permanent architectural lighting done the right way.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="services.html">Permanent Lighting</a></li>
+      <li><a href="services.html">Security Lighting</a></li>
+      <li><a href="services.html">Holiday Lighting</a></li>
+      <li><a href="services.html">Game Day Lighting</a></li>
+      <li><a href="services.html">Accent Lighting</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Start My Quote</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="tel:6124788428">(612) 478-8428</a></li>
+      <li style="color:rgba(255,255,255,0.55);font-size:0.9rem;margin-bottom:10px;">Twin Cities Metro</li>
+      <li style="color:rgba(255,255,255,0.55);font-size:0.88rem;line-height:1.6;">Mon–Sat: 9am-9pm</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <a href="https://www.instagram.com/timbermen_lighting" target="_blank" style="color:rgba(255,255,255,0.55);text-decoration:none;margin-right:16px;">Instagram</a>
+      <a href="https://www.facebook.com/share/1BadTXN1tR/?mibextid=wwXIfr" target="_blank" style="color:rgba(255,255,255,0.55);text-decoration:none;">Facebook</a>
+    </div>
+    <span>© 2026 Timbermen Lighting. All rights reserved.</span>
+    <span>Serving the Twin Cities &amp; surrounding areas</span>
+  </div>
+</footer>
+<div class="floating-bar">
+  <a href="tel:6124788428" class="fb-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call</a>
+  <div class="fb-divider"></div>
+  <a href="contact.html" class="fb-quote">Start My Quote<span>Complimentary Consultation</span></a>
+  <div class="fb-divider"></div>
+  <a href="sms:6124788428" class="fb-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Text</a>
+</div>
+<script>
+function toggleMenu() { document.getElementById("mobileMenu").classList.toggle("open"); }
+function closeMenu() { document.getElementById("mobileMenu").classList.remove("open"); }
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById("progress-bar").style.width = ((scrollTop / docHeight) * 100) + "%";
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
+}, { threshold: 0.1 });
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+const photos = [];
+let currentPhoto = 0;
+function openLightbox(index) {}
+function closeLightbox() { document.getElementById("lightbox").classList.remove("open"); document.body.style.overflow = ""; }
+function updateLightbox() {}
+function nextPhoto() {}
+function prevPhoto() {}
+document.getElementById("lightbox").addEventListener("click", function(e) { if (e.target === this) closeLightbox(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
+</script>
+<script>
+(function(){
+  function scatterTwinkles(el, count){
+    for(var i=0;i<count;i++){
+      var t = document.createElement('div');
+      t.className = 'twinkle';
+      var size = 2 + Math.random()*3;
+      t.style.width = size+'px';
+      t.style.height = size+'px';
+      t.style.left = Math.random()*100+'%';
+      t.style.top = Math.random()*100+'%';
+      t.style.animationDuration = (2 + Math.random()*3)+'s';
+      t.style.animationDelay = (Math.random()*4)+'s';
+      el.appendChild(t);
+    }
+  }
+  document.querySelectorAll('.twinkle-field').forEach(function(el){
+    var count = parseInt(el.getAttribute('data-count'), 10) || 20;
+    scatterTwinkles(el, count);
+  });
+})();
+</script>
+<script>
+(function(){
+  var navEl = document.querySelector('nav');
+  window.addEventListener('scroll', function(){
+    if(!navEl) return;
+    if(window.scrollY > 30){ navEl.classList.add('nav-scrolled'); }
+    else{ navEl.classList.remove('nav-scrolled'); }
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>
