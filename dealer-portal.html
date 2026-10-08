@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<title>Dealer Shop — Timbermen Lighting</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+:root{--black:#000;--b2:#07070A;--b3:#0D0D12;--b4:#15151C;--b5:#1E1E27;--red:#E63329;--red2:#FF4A3D;
+--blue:#2B7FFF;--blue2:#5C9DFF;--white:#fff;--gray:#A0A0AE;--dim:#6B6B78;--ok:#3DDC84;--warn:#FFB020;
+--display:'Barlow Condensed',sans-serif;--body:'Barlow',sans-serif;--line:rgba(255,255,255,.10)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--black)}
+body{font-family:var(--body);color:var(--white);background:var(--black);-webkit-font-smoothing:antialiased;min-height:100vh;
+background-image:radial-gradient(ellipse at 15% -10%,rgba(43,127,255,.14),transparent 55%),radial-gradient(ellipse at 90% 0%,rgba(230,51,41,.12),transparent 50%)}
+a{color:var(--blue2)} button{font-family:inherit;cursor:pointer} img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:50;background:rgba(7,7,10,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand img{height:38px;width:auto}
+.brand b{font-family:var(--display);font-weight:900;font-size:1.25rem;letter-spacing:.03em;background:linear-gradient(90deg,var(--red),#fff 55%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand i{font-style:normal;display:block;font-size:.62rem;font-weight:600;color:var(--gray);letter-spacing:.14em;text-transform:uppercase}
+.navbtns{display:flex;gap:8px;align-items:center}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;font-size:.95rem;color:#fff;background:linear-gradient(135deg,var(--red),#c9241b);min-height:44px}
+.btn:hover{filter:brightness(1.12)} .btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--white)}
+.btn.blue{background:linear-gradient(135deg,var(--blue),#1A5FCC)}
+.btn.sm{padding:8px 14px;min-height:38px;font-size:.88rem}
+.pill{border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--b5);color:var(--gray)}
+.cartbtn{position:relative}
+.cartbtn .n{position:absolute;top:-6px;right:-6px;background:var(--blue);border-radius:999px;font-size:.7rem;min-width:20px;height:20px;display:grid;place-items:center;padding:0 5px}
+h1,h2,h3{font-family:var(--display);letter-spacing:.02em;line-height:1.05}
+h1{font-size:2.2rem;font-weight:800} h2{font-size:1.6rem;font-weight:800;margin-bottom:12px}
+.card{background:var(--b3);border:1px solid var(--line);border-radius:16px}
+/* auth */
+.authwrap{min-height:calc(100vh - 64px);display:grid;place-items:center;padding:24px 0}
+.authcard{width:100%;max-width:420px;padding:28px}
+.authcard p.sub{color:var(--gray);margin:8px 0 18px;font-size:.95rem;line-height:1.5}
+label{display:block;font-size:.8rem;font-weight:600;color:var(--gray);margin:12px 0 5px;letter-spacing:.04em}
+input,select,textarea{width:100%;background:var(--b2);border:1px solid var(--line);border-radius:10px;color:#fff;padding:11px 12px;font:inherit;font-size:1rem;min-height:44px}
+input:focus,textarea:focus,select:focus{border-color:var(--blue);outline:none}
+.msg{margin-top:12px;font-size:.9rem;padding:10px 12px;border-radius:10px;display:none}
+.msg.err{display:block;background:rgba(230,51,41,.12);color:#ff8a82;border:1px solid rgba(230,51,41,.35)}
+.msg.ok{display:block;background:rgba(61,220,132,.1);color:var(--ok);border:1px solid rgba(61,220,132,.3)}
+.linkbtn{background:none;border:0;color:var(--blue2);font-size:.88rem;margin-top:14px;padding:6px 0}
+/* tier banner */
+.tier{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding:16px 20px;margin:20px 0}
+.tier .k{font-size:.72rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+.tier .v{font-family:var(--display);font-size:1.5rem;font-weight:800}
+.bar{height:6px;background:var(--b5);border-radius:99px;overflow:hidden;min-width:180px;margin-top:6px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--blue))}
+/* tabs, filters */
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:18px;overflow-x:auto}
+.tab{background:none;border:0;color:var(--gray);padding:12px 16px;font-weight:700;border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:#fff;border-color:var(--red)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{background:var(--b4);border:1px solid var(--line);color:var(--gray);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.chip.on{color:#fff;border-color:var(--blue);background:rgba(43,127,255,.15)}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.prod{display:flex;flex-direction:column;overflow:hidden}
+.pimg{aspect-ratio:4/3;background:linear-gradient(135deg,var(--b4),var(--b2));display:grid;place-items:center;color:var(--dim);font-family:var(--display);font-size:2.2rem;font-weight:800;letter-spacing:.05em;overflow:hidden}
+.pimg img{width:100%;height:100%;object-fit:cover}
+.pbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pname{font-family:var(--display);font-size:1.25rem;font-weight:700}
+.pdesc{color:var(--gray);font-size:.88rem;line-height:1.45}
+.price{font-family:var(--display);font-size:1.7rem;font-weight:800}
+.price small{font-family:var(--body);font-size:.85rem;color:var(--gray);font-weight:500}
+.row{display:flex;gap:8px;align-items:end;margin-top:auto;padding-top:8px}
+.row>div{flex:1}
+.row label{margin-top:0}
+.mto{font-size:.74rem;color:var(--warn)}
+/* cart drawer */
+.drawer{position:fixed;inset:0;z-index:80;display:none}
+.drawer.open{display:block}
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.65)}
+.panel{position:absolute;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--b2);border-left:1px solid var(--line);overflow-y:auto;padding:20px 18px 40px}
+.line{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.line .nm{font-weight:600}.line .meta{color:var(--gray);font-size:.82rem;grid-column:1}
+.line .amt{font-weight:700;text-align:right}
+.rm{background:none;border:0;color:var(--red2);font-size:.82rem;text-align:right;grid-column:2}
+.tot{display:flex;justify-content:space-between;padding:6px 0;color:var(--gray)}
+.tot.big{color:#fff;font-weight:700;font-size:1.05rem;border-top:1px solid var(--line);margin-top:6px;padding-top:12px}
+.note{font-size:.82rem;color:var(--gray);line-height:1.5;margin-top:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* orders */
+.order{padding:16px 18px;margin-bottom:12px}
+.order .h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.st-requested{color:var(--warn)}.st-invoiced{color:var(--blue2)}.st-paid,.st-shipped{color:var(--ok)}.st-cancelled{color:var(--dim)}
+.empty{color:var(--gray);padding:40px 0;text-align:center}
+footer{margin-top:60px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--dim);font-size:.82rem}
+[hidden]{display:none!important}
+@media(max-width:560px){h1{font-size:1.8rem}.two{grid-template-columns:1fr}.brand i{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="logo.png" alt=""><span><b>TIMBERMEN</b><i>Dealer Shop</i></span></a>
+  <div class="navbtns" id="navbtns" hidden>
+    <button class="btn ghost sm cartbtn" id="openCart" type="button">Cart<span class="n" id="cartN">0</span></button>
+    <button class="btn ghost sm" id="signOut" type="button">Sign out</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<!-- Sign in -->
+<section id="vLogin" class="authwrap" hidden><div class="card authcard">
+  <h1>Dealer sign in</h1>
+  <p class="sub">Private wholesale shop for authorized Timbermen dealers. Accounts are created by invitation after your Dealer Agreement is signed.</p>
+  <form id="fLogin" autocomplete="on">
+    <label for="em">Email</label><input id="em" type="email" autocomplete="username" required>
+    <label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required>
+    <button class="btn" style="width:100%;margin-top:18px" type="submit">Sign in</button>
+    <div class="msg" id="loginMsg" role="status"></div>
+  </form>
+  <button class="linkbtn" id="forgot" type="button">Forgot or need to set your password?</button>
+</div></section>
+
+<!-- Set new password (invite / recovery) -->
+<section id="vNewPw" class="authwrap" hidden><div class="card authcard">
+  <h1>Set your password</h1>
+  <p class="sub">Choose a long, unique password (12+ characters).</p>
+  <form id="fNewPw">
+    <label for="np">New password</label><input id="np" type="password" autocomplete="new-password" minlength="12" required>
+    <button class="btn" style="width:100%;margin-top:18px" type="submit">Save password</button>
+    <div class="msg" id="newPwMsg"></div>
+  </form>
+</div></section>
+
+<!-- Waiting for approval -->
+<section id="vPending" class="authwrap" hidden><div class="card authcard">
+  <h1>Almost there</h1>
+  <p class="sub">Your account is created but not activated yet. We activate dealers once the Dealer Agreement and NDA are signed. Questions: <a href="mailto:timbermenlighting@gmail.com">timbermenlighting@gmail.com</a>.</p>
+</div></section>
+
+<!-- Shop -->
+<section id="vShop" hidden>
+  <div class="card tier" id="tierBox"></div>
+  <div class="tabs" role="tablist"><button class="tab on" data-tab="shop" type="button">Shop</button><button class="tab" data-tab="orders" type="button">My orders</button></div>
+  <div id="tShop">
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div id="tOrders" hidden></div>
+</section>
+</main>
+
+<!-- Cart -->
+<div class="drawer" id="drawer" aria-hidden="true"><div class="scrim" id="scrim"></div>
+<aside class="panel" role="dialog" aria-label="Cart">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Your order</h2><button class="btn ghost sm" id="closeCart" type="button">Close</button></div>
+  <div id="cartLines"></div>
+  <div id="cartTotals"></div>
+  <div id="cartForm" hidden>
+    <h3 style="margin:18px 0 4px;font-size:1.2rem">Ship to</h3>
+    <label for="sn">Name / business</label><input id="sn" autocomplete="organization">
+    <label for="sl1">Street address</label><input id="sl1" autocomplete="address-line1">
+    <label for="sl2">Suite / unit (optional)</label><input id="sl2" autocomplete="address-line2">
+    <div class="two"><div><label for="sc">City</label><input id="sc" autocomplete="address-level2"></div>
+    <div><label for="ss">State</label><input id="ss" maxlength="2" autocomplete="address-level1" style="text-transform:uppercase"></div></div>
+    <label for="sz">ZIP</label><input id="sz" inputmode="numeric" autocomplete="postal-code" maxlength="10">
+    <label for="snote">Note (optional)</label><textarea id="snote" rows="2" maxlength="500"></textarea>
+    <button class="btn" id="submitOrder" style="width:100%;margin-top:16px" type="button">Request invoice</button>
+    <div class="msg" id="cartMsg" role="status"></div>
+    <p class="note">This sends an order request, not a payment. We confirm shipping and email you an invoice, due in 7 days. Your order ships after payment. Minnesota sales tax applies to taxable deliveries in Minnesota, including shipping, and is calculated on the invoice. If you hold a valid exemption certificate, email it to timbermenlighting@gmail.com before you order.</p>
+  </div>
+</aside></div>
+
+<footer><div class="wrap">Timbermen Lighting LLC · Private to authorized dealers · <a href="terms.html">Terms</a> · <a href="mailto:timbermenlighting@gmail.com">Support</a></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+(function(){
+'use strict';
+var SUPABASE_URL='https://cympcmhotbhfcrkkdcoa.supabase.co';
+var SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXBjbWhvdGJoZmNya2tkY29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE0MjI3NzAsImV4cCI6MjEwNjk5ODc3MH0.lBpH5bJvEdy_WJIfe-Ct7IPkodc-DA5HsoKmX9115ug';
+var FT=3.28084;
+var db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+var $=function(id){return document.getElementById(id)};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function money(c){return c==null?'—':'$'+(c/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+var CATS={lights:'Lights',track:'Track',control:'Controllers & power',wiring:'Connectors & wiring',samples:'Samples & tools'};
+var S={user:null,dealer:null,status:null,products:[],prices:{},images:{},cart:[],cat:'all',preview:null,pvSeq:0,pvTimer:null};
+
+function fn(name,body){
+  return db.functions.invoke(name,{body:body}).then(function(r){
+    if(!r.error)return{ok:true,data:r.data};
+    var c=r.error.context;
+    if(c&&c.json)return c.json().then(function(j){return{ok:false,error:(j&&j.error)||'Something went wrong. Try again.'}}).catch(function(){return{ok:false,error:'Something went wrong. Try again.'}});
+    return{ok:false,error:'Something went wrong. Try again.'};
+  });
+}
+function show(id){['vLogin','vNewPw','vPending','vShop'].forEach(function(v){$(v).hidden=(v!==id)});$('navbtns').hidden=(id!=='vShop')}
+function msg(el,text,kind){el.className='msg '+(kind||'err');el.textContent=text}
+
+/* ── Auth ── */
+$('fLogin').addEventListener('submit',function(e){
+  e.preventDefault();var m=$('loginMsg');m.className='msg';m.textContent='';
+  db.auth.signInWithPassword({email:$('em').value.trim(),password:$('pw').value}).then(function(r){
+    if(r.error){msg(m,'That email and password don\'t match.');return}
+    boot();
+  });
+});
+$('forgot').addEventListener('click',function(){
+  var em=$('em').value.trim(),m=$('loginMsg');
+  if(!em){msg(m,'Enter your email above first.');return}
+  db.auth.resetPasswordForEmail(em,{redirectTo:location.origin+'/dealer-portal'}).then(function(){
+    msg(m,'If that email belongs to a dealer, a link to set your password is on its way.','ok');
+  });
+});
+$('fNewPw').addEventListener('submit',function(e){
+  e.preventDefault();var m=$('newPwMsg');
+  db.auth.updateUser({password:$('np').value}).then(function(r){
+    if(r.error){msg(m,r.error.message);return}
+    boot();
+  });
+});
+$('signOut').addEventListener('click',function(){db.auth.signOut().then(function(){S.cart=[];closeCart();show('vLogin')})});
+db.auth.onAuthStateChange(function(ev){if(ev==='PASSWORD_RECOVERY')show('vNewPw')});
+
+/* ── Boot ── */
+function boot(){
+  db.auth.getSession().then(function(r){
+    var sess=r.data&&r.data.session;
+    if(!sess){show('vLogin');return}
+    if(/type=(recovery|invite)/.test(location.hash)){show('vNewPw');return}
+    S.user=sess.user;
+    return db.from('dealer_status').select('*').eq('id',S.user.id).single().then(function(x){
+      S.status=x.data;
+      if(!S.status||!S.status.approved){show('vPending');return}
+      return loadShop();
+    });
+  });
+}
+function loadShop(){
+  return Promise.all([
+    db.from('products').select('*').order('sort'),
+    db.from('prices').select('*')
+  ]).then(function(r){
+    S.products=r[0].data||[];S.prices={};
+    (r[1].data||[]).forEach(function(p){(S.prices[p.product_id]=S.prices[p.product_id]||{})[p.tier]=p.unit_cents});
+    show('vShop');renderTier();renderChips();renderGrid();loadImages();
+  });
+}
+function loadImages(){
+  var files=S.products.map(function(p){return p.image_file}).filter(Boolean);
+  if(!files.length)return;
+  db.storage.from('product-images').createSignedUrls(files,3600).then(function(r){
+    (r.data||[]).forEach(function(x){if(x.signedUrl&&!x.error)S.images[x.path]=x.signedUrl});
+    document.querySelectorAll('[data-img]').forEach(function(el){
+      var u=S.images[el.getAttribute('data-img')];
+      if(u){var im=new Image();im.alt='';im.onload=function(){el.innerHTML='';el.appendChild(im)};im.src=u}
+    });
+  });
+}
+
+/* ── Tier banner ── */
+function renderTier(){
+  var s=S.status,ft=s.trailing_ft||0,name={starting:'Starting',building:'Building',established:'Established'}[s.tier];
+  var next=ft>=10000?null:(ft>=5000?10000:5000),pct=next?Math.min(100,ft/next*100):100;
+  $('tierBox').innerHTML='<div><div class="k">Your tier</div><div class="v">'+esc(name)+'</div></div>'
+   +'<div><div class="k">Lights purchased, last 12 months</div><div class="v">'+ft.toLocaleString()+' ft</div></div>'
+   +'<div style="flex:1;min-width:200px"><div class="k">'+(next?(next-ft).toLocaleString()+' ft to next tier':'Top tier reached')+'</div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+}
+
+/* ── Catalogue ── */
+function renderChips(){
+  var cats=[];S.products.forEach(function(p){if(cats.indexOf(p.category)<0)cats.push(p.category)});
+  var h='<button type="button" class="chip '+(S.cat==='all'?'on':'')+'" data-cat="all">All</button>';
+  cats.forEach(function(c){h+='<button type="button" class="chip '+(S.cat===c?'on':'')+'" data-cat="'+esc(c)+'">'+esc(CATS[c]||c)+'</button>'});
+  $('chips').innerHTML=h;
+}
+$('chips').addEventListener('click',function(e){var b=e.target.closest('[data-cat]');if(!b)return;S.cat=b.getAttribute('data-cat');renderChips();renderGrid()});
+
+function renderGrid(){
+  var t=S.status.tier,h='';
+  S.products.filter(function(p){return S.cat==='all'||p.category===S.cat}).forEach(function(p){
+    var uc=(S.prices[p.id]||{})[t],per=p.pricing_mode==='per_meter';
+    var priceTxt=uc==null?'<span class="price"><small>Price unavailable</small></span>'
+      :per?'<span class="price">'+money(Math.round(uc/FT))+'<small> / ft</small></span>':'<span class="price">'+money(uc)+'<small> each</small></span>';
+    var initials=esc(CATS[p.category]||p.category);
+    h+='<article class="card prod" data-sku="'+esc(p.sku)+'">'
+     +'<div class="pimg" data-img="'+esc(p.image_file||'')+'">'+initials+'</div><div class="pbody">'
+     +'<div class="pname">'+esc(p.name)+'</div>'
+     +(p.description?'<div class="pdesc">'+esc(p.description)+'</div>':'')
+     +priceTxt
+     +(per?'<div class="pdesc">Enter feet. Your order total is rounded up to whole 1 m pieces.</div>':'')
+     +(p.made_to_order?'<div class="mto">Made to order. Cannot be cancelled once production starts.</div>':'')
+     +(p.stock_qty!=null&&p.stock_qty<=0?'<div class="mto">Currently on backorder</div>':'')
+     +(uc==null?'':'<div class="row">'
+       +(p.requires_color?'<div style="flex:1.4"><label>RAL color</label><input class="in-color" placeholder="e.g. RAL 9005" maxlength="40"></div>':'')
+       +'<div><label>'+(per?'Feet':'Qty')+'</label><input class="in-amt" type="number" inputmode="numeric" min="1" step="1" placeholder="'+(per?'100':'1')+'"></div>'
+       +'<button class="btn sm add" type="button">Add</button></div>')
+     +'</div></article>';
+  });
+  $('grid').innerHTML=h||'<p class="empty">No products in this category.</p>';
+  loadImages();
+}
+$('grid').addEventListener('click',function(e){
+  var b=e.target.closest('.add');if(!b)return;
+  var card=b.closest('.prod'),sku=card.getAttribute('data-sku');
+  var p=S.products.filter(function(x){return x.sku===sku})[0],per=p.pricing_mode==='per_meter';
+  var amt=Number(card.querySelector('.in-amt').value),colEl=card.querySelector('.in-color');
+  var color=colEl?colEl.value.trim():'';
+  if(!(amt>0)||(!per&&amt%1!==0)){card.querySelector('.in-amt').focus();return}
+  if(p.requires_color&&!color){colEl.focus();return}
+  var item={sku:sku,color:p.requires_color?color:undefined};
+  if(per)item.feet=amt;else item.qty=amt;
+  S.cart.push(item);
+  card.querySelector('.in-amt').value='';b.textContent='Added ✓';setTimeout(function(){b.textContent='Add'},1100);
+  updateCart();
+});
+
+/* ── Cart ── */
+function openCart(){$('drawer').classList.add('open');$('drawer').setAttribute('aria-hidden','false');updateCart()}
+function closeCart(){$('drawer').classList.remove('open');$('drawer').setAttribute('aria-hidden','true')}
+$('openCart').addEventListener('click',openCart);$('closeCart').addEventListener('click',closeCart);$('scrim').addEventListener('click',closeCart);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCart()});
+$('cartLines').addEventListener('click',function(e){var b=e.target.closest('[data-rm]');if(!b)return;S.cart.splice(+b.getAttribute('data-rm'),1);updateCart()});
+$('ss').addEventListener('input',schedulePreview);
+
+function updateCart(){
+  $('cartN').textContent=S.cart.length;
+  if(!S.cart.length){$('cartLines').innerHTML='<p class="empty">Your cart is empty.</p>';$('cartTotals').innerHTML='';$('cartForm').hidden=true;S.preview=null;return}
+  $('cartForm').hidden=false;
+  // Immediate local list; server totals follow
+  var h='';S.cart.forEach(function(c,i){
+    var p=S.products.filter(function(x){return x.sku===c.sku})[0]||{name:c.sku};
+    h+='<div class="line"><div class="nm">'+esc(p.name)+(c.color?' — '+esc(c.color):'')+'</div><div class="amt">&nbsp;</div>'
+      +'<div class="meta">'+(c.feet?esc(c.feet)+' ft entered':'Qty '+esc(c.qty))+'</div><button class="rm" data-rm="'+i+'" type="button">Remove</button></div>';
+  });
+  $('cartLines').innerHTML=h;
+  schedulePreview();
+}
+function schedulePreview(){clearTimeout(S.pvTimer);S.pvTimer=setTimeout(runPreview,250)}
+function shipState(){var s=$('ss').value.trim().toUpperCase();return s.length===2?s:undefined}
+function runPreview(){
+  if(!S.cart.length)return;var seq=++S.pvSeq;
+  $('cartTotals').innerHTML='<p class="note">Calculating…</p>';
+  fn('submit-order',{items:S.cart,preview:true,ship_to:{state:shipState()}}).then(function(r){
+    if(seq!==S.pvSeq)return;
+    if(!r.ok){
+      $('cartTotals').innerHTML='<div class="msg err">'+esc(r.error)+'</div>';S.preview=null;return}
+    S.preview=r.data;renderCartPriced();
+  });
+}
+function renderCartPriced(){
+  var d=S.preview,h='';
+  d.lines.forEach(function(l,i){
+    var detail=l.mode==='per_meter'?(l.feet_requested+' ft entered → '+l.pieces+' × 1 m = '+l.billed_feet+' ft billed @ '+money(l.per_foot_cents)+'/ft'):('Qty '+l.pieces+' @ '+money(l.unit_cents));
+    h+='<div class="line"><div class="nm">'+esc(l.name)+(l.color?' — '+esc(l.color):'')+'</div><div class="amt">'+money(l.line_cents)+'</div>'
+      +'<div class="meta">'+esc(detail)+(l.made_to_order?' · made to order':'')+'</div></div>';
+  });
+  $('cartLines').innerHTML=h;
+  var t='<div class="tot"><span>Subtotal</span><span>'+money(d.subtotal_cents)+'</span></div>'
+   +'<div class="tot"><span>Shipping &amp; handling (estimate)</span><span>'+(d.shipping_estimate_cents==null?'Confirmed on invoice':money(d.shipping_estimate_cents))+'</span></div>'
+   +'<div class="tot"><span>Sales tax</span><span>Calculated on invoice</span></div>'
+   +'<div class="tot big"><span>Estimated total</span><span>'+money(d.subtotal_cents+(d.shipping_estimate_cents||0))+'+</span></div>'
+   +'<p class="note">Pricing tier for this order: <b>'+esc(d.tier)+'</b>. This order counts toward your tier. Quantities are billed in whole 1 m pieces, so track and lights ship exactly as billed.</p>';
+  $('cartTotals').innerHTML=t;
+}
+$('submitOrder').addEventListener('click',function(){
+  var m=$('cartMsg'),b=$('submitOrder');m.className='msg';m.textContent='';
+  var ship={name:$('sn').value,line1:$('sl1').value,line2:$('sl2').value,city:$('sc').value,state:$('ss').value,zip:$('sz').value};
+  b.disabled=true;b.textContent='Sending…';
+  fn('submit-order',{items:S.cart,ship_to:ship,note:$('snote').value}).then(function(r){
+    b.disabled=false;b.textContent='Request invoice';
+    if(!r.ok){msg(m,r.error);return}
+    S.cart=[];updateCart();closeCart();
+    switchTab('orders');loadOrders('Request #'+r.data.order_id+' sent. We\'ll confirm shipping and email your invoice.');
+  });
+});
+
+/* ── Orders ── */
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-tab')===t)});
+  $('tShop').hidden=(t!=='shop');$('tOrders').hidden=(t!=='orders');
+  if(t==='orders')loadOrders();
+}
+document.querySelector('.tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(b)switchTab(b.getAttribute('data-tab'))});
+var LBL={requested:'Requested',approved:'Approved',invoiced:'Invoice sent',paid:'Paid',shipped:'Shipped',cancelled:'Cancelled'};
+function loadOrders(banner){
+  $('tOrders').innerHTML='<p class="empty">Loading…</p>';
+  db.from('orders').select('*').order('created_at',{ascending:false}).then(function(r){
+    var o=r.data||[],h=banner?'<div class="msg ok" style="display:block;margin:0 0 14px">'+esc(banner)+'</div>':'';
+    if(!o.length)h+='<p class="empty">No orders yet. Add items from the shop and request an invoice.</p>';
+    o.forEach(function(x){
+      var link=(x.invoice_url&&/^https:\/\//.test(x.invoice_url))?' <a class="btn sm blue" style="text-decoration:none;display:inline-block" href="'+esc(x.invoice_url)+'" target="_blank" rel="noopener">View &amp; pay invoice</a>':'';
+      var items=(x.items||[]).map(function(l){return esc(l.name)+(l.color?' ('+esc(l.color)+')':'')+' × '+esc(l.pieces)}).join('<br>');
+      h+='<div class="card order"><div class="h"><div><b>Order #'+x.id+'</b> <span class="pill st-'+esc(x.status)+'">'+esc(LBL[x.status]||x.status)+'</span></div>'
+        +'<div>'+(x.total_cents!=null?'<b>'+money(x.total_cents)+'</b>':'<span style="color:var(--gray)">Subtotal '+money(x.subtotal_cents)+'</span>')+link+'</div></div>'
+        +'<p class="note" style="margin-top:8px">'+new Date(x.created_at).toLocaleDateString()+(x.due_at&&x.status==='invoiced'?' · Due '+new Date(x.due_at).toLocaleDateString():'')+(x.tracking?' · Tracking: '+esc(x.tracking):'')+'</p>'
+        +'<p class="note">'+items+'</p></div>';
+    });
+    $('tOrders').innerHTML=h;
+  });
+}
+
+boot();
+})();
+</script>
+</body>
+</html>
