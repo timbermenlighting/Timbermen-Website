@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<title>Staff Dashboard — Timbermen Lighting</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+:root{--black:#000;--b2:#07070A;--b3:#0D0D12;--b4:#15151C;--b5:#1E1E27;--red:#E63329;--blue:#2B7FFF;--blue2:#5C9DFF;
+--white:#fff;--gray:#A0A0AE;--dim:#6B6B78;--up:#3DDC84;--down:#FF6B63;--warn:#FFB020;--line:rgba(255,255,255,.10);
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--grid:rgba(255,255,255,.07);
+--display:'Barlow Condensed',sans-serif;--body:'Barlow',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);color:var(--white);background:var(--black);-webkit-font-smoothing:antialiased;min-height:100vh;
+background-image:radial-gradient(ellipse at 10% -10%,rgba(43,127,255,.12),transparent 55%),radial-gradient(ellipse at 95% 0,rgba(230,51,41,.10),transparent 50%)}
+a{color:var(--blue2)} button{font-family:inherit;cursor:pointer} :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:50;background:rgba(7,7,10,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}.brand img{height:34px}
+.brand b{font-family:var(--display);font-weight:900;font-size:1.2rem;letter-spacing:.03em;background:linear-gradient(90deg,var(--red),#fff 55%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand i{font-style:normal;font-size:.62rem;color:var(--gray);letter-spacing:.14em;text-transform:uppercase;display:block;font-weight:600}
+.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;font-size:.92rem;color:#fff;background:linear-gradient(135deg,var(--red),#c9241b);min-height:42px}
+.btn:hover{filter:brightness(1.12)}.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:transparent;border:1px solid var(--line)}.btn.blue{background:linear-gradient(135deg,var(--blue),#1A5FCC)}
+.btn.sm{padding:6px 12px;min-height:34px;font-size:.82rem}.btn.good{background:linear-gradient(135deg,#1c9c5c,#127a45)}
+h1,h2,h3{font-family:var(--display);letter-spacing:.02em;line-height:1.05}h1{font-size:2rem;font-weight:800}h2{font-size:1.5rem;font-weight:800;margin-bottom:10px}h3{font-size:1.15rem;font-weight:700}
+.card{background:var(--b3);border:1px solid var(--line);border-radius:14px;padding:16px}
+label{display:block;font-size:.76rem;font-weight:600;color:var(--gray);margin:10px 0 4px;letter-spacing:.04em}
+input,select,textarea{width:100%;background:var(--b2);border:1px solid var(--line);border-radius:9px;color:#fff;padding:9px 10px;font:inherit;font-size:.95rem;min-height:40px}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none}input[type=checkbox]{width:auto;min-height:0}
+.msg{margin-top:10px;font-size:.88rem;padding:9px 12px;border-radius:9px;display:none}
+.msg.err{display:block;background:rgba(230,51,41,.12);color:#ff8a82;border:1px solid rgba(230,51,41,.35)}
+.msg.ok{display:block;background:rgba(61,220,132,.1);color:var(--up);border:1px solid rgba(61,220,132,.3)}
+.center{min-height:calc(100vh - 60px);display:grid;place-items:center;padding:24px 0}.authcard{width:100%;max-width:440px;padding:26px}
+.authcard p{color:var(--gray);margin:8px 0 14px;font-size:.92rem;line-height:1.5}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:16px 0;overflow-x:auto}
+.tab{background:none;border:0;color:var(--gray);padding:11px 14px;font-weight:700;border-bottom:2px solid transparent;white-space:nowrap}.tab.on{color:#fff;border-color:var(--red)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-bottom:14px}.bar>div{min-width:130px}.bar label{margin-top:0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-bottom:16px}
+.kpi .k{font-size:.72rem;color:var(--gray);letter-spacing:.09em;text-transform:uppercase;font-weight:600}
+.kpi .v{font-family:var(--display);font-size:2rem;font-weight:800;margin:4px 0 2px}
+.kpi .sub{font-size:.76rem;color:var(--dim);margin-top:2px}
+.delta{display:inline-flex;gap:6px;align-items:center;font-size:.82rem;font-weight:700}
+.delta .vs{font-weight:500;color:var(--dim)}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--gray)}
+.grid2{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:.88rem}th{text-align:left;color:var(--gray);font-weight:600;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;padding:8px 8px;border-bottom:1px solid var(--line)}
+td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.pill{border-radius:999px;padding:2px 9px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--b5);color:var(--gray);white-space:nowrap}
+.pill.warn{color:var(--warn)}.pill.ok{color:var(--up)}.pill.bad{color:var(--down)}.pill.info{color:var(--blue2)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.chip{background:var(--b4);border:1px solid var(--line);color:var(--gray);border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:600}.chip.on{color:#fff;border-color:var(--blue);background:rgba(43,127,255,.15)}
+.order{margin-bottom:12px}.order .h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.order .acts{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-top:10px}.order .acts>div{width:150px}
+.small{font-size:.8rem;color:var(--gray);line-height:1.5}
+.goal{margin:10px 0}.goal .t{display:flex;justify-content:space-between;font-size:.85rem}.track{height:7px;background:var(--b5);border-radius:99px;overflow:hidden;margin-top:5px}.track i{display:block;height:100%;background:var(--s1)}
+.chart{position:relative}.chart svg{width:100%;height:auto;display:block}
+.tip{position:absolute;pointer-events:none;background:#000;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.8rem;display:none;white-space:nowrap;z-index:5}
+.note{background:rgba(255,176,32,.08);border:1px solid rgba(255,176,32,.3);color:#ffd27a;border-radius:10px;padding:10px 12px;font-size:.84rem;line-height:1.5;margin-bottom:12px}
+.empty{color:var(--gray);padding:28px 0;text-align:center}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+[hidden]{display:none!important}
+@media(max-width:560px){h1{font-size:1.6rem}.row2{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi .v{font-size:1.5rem}.kpi{padding:12px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <div class="brand"><img src="data:image/png;base64,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" alt="Timbermen" width="47" height="38"><span><b>TIMBERMEN</b><i>Staff dashboard</i></span></div>
+ <div id="topbtns" hidden><button class="btn ghost sm" id="refresh" type="button">Refresh</button> <button class="btn ghost sm" id="signOut" type="button">Sign out</button></div>
+</div></header>
+<main class="wrap">
+
+<section id="vLogin" class="center" hidden><div class="card authcard"><h1>Staff sign in</h1><p>Timbermen Lighting team members only.</p>
+ <form id="fLogin"><label for="em">Email</label><input id="em" type="email" autocomplete="username" required>
+ <label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required>
+ <button class="btn" style="width:100%;margin-top:16px" type="submit">Sign in</button><div class="msg" id="loginMsg"></div></form></div></section>
+
+<section id="vDenied" class="center" hidden><div class="card authcard"><h1>Not authorized</h1><p>This account doesn't have staff access.</p><button class="btn ghost" id="deniedOut" type="button">Sign out</button></div></section>
+
+<section id="vMfa" class="center" hidden><div class="card authcard"><h1>Two-factor code</h1><p>Enter the 6-digit code from your authenticator app.</p>
+ <form id="fMfa"><label for="mc">Code</label><input id="mc" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required>
+ <button class="btn" style="width:100%;margin-top:16px" type="submit">Verify</button><div class="msg" id="mfaMsg"></div></form></div></section>
+
+<section id="vEnroll" class="center" hidden><div class="card authcard"><h1>Set up two-factor</h1>
+ <p>Scan this with an authenticator app (Google Authenticator, Authy, 1Password), then enter the 6-digit code. You can't use the dashboard until this is done.</p>
+ <div id="qr" style="background:#fff;border-radius:10px;padding:10px;width:200px;margin:0 auto 10px"></div>
+ <p class="small" id="secret"></p>
+ <form id="fEnroll"><label for="ec">Code from the app</label><input id="ec" inputmode="numeric" maxlength="6" required>
+ <button class="btn" style="width:100%;margin-top:16px" type="submit">Turn on 2FA</button><div class="msg" id="enrollMsg"></div></form></div></section>
+
+<section id="vApp" hidden>
+ <div class="tabs" id="tabs">
+  <button class="tab on" data-t="overview" type="button">Overview</button><button class="tab" data-t="orders" type="button">Orders</button>
+  <button class="tab" data-t="dealers" type="button">Dealers</button><button class="tab" data-t="products" type="button">Products &amp; prices</button>
+  <button class="tab" data-t="ledger" type="button">Ledger</button><button class="tab" data-t="shipping" type="button">Shipping</button>
+  <button class="tab" data-t="goals" type="button">Goals</button><button class="tab" data-t="audit" type="button">Audit log</button>
+ </div>
+ <div id="p-overview"></div><div id="p-orders" hidden></div><div id="p-dealers" hidden></div><div id="p-products" hidden></div>
+ <div id="p-ledger" hidden></div><div id="p-shipping" hidden></div><div id="p-goals" hidden></div><div id="p-audit" hidden></div>
+</section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+(function(){
+'use strict';
+var SUPABASE_URL='https://cympcmhotbhfcrkkdcoa.supabase.co';
+var SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXBjbWhvdGJoZmNya2tkY29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE0MjI3NzAsImV4cCI6MjEwNjk5ODc3MH0.lBpH5bJvEdy_WJIfe-Ct7IPkodc-DA5HsoKmX9115ug';
+var db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true}});
+var $=function(id){return document.getElementById(id)};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function money(c,dec){if(c==null)return '—';var neg=c<0;var v=Math.abs(c)/100;return (neg?'−':'')+'$'+v.toLocaleString('en-US',{minimumFractionDigits:dec===0?0:2,maximumFractionDigits:dec===0?0:2})}
+function toCents(v){var n=parseFloat(String(v).replace(/[$,\s]/g,''));return isFinite(n)?Math.round(n*100):null}
+function fmtDate(d){return d?new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):''}
+function fmtDT(d){return new Date(d).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+
+// ---PURE-START---
+var FT=3.28084;
+function startOfDay(d){var x=new Date(d);x.setHours(0,0,0,0);return x}
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
+function rangeFor(key,now,custom){
+  var t=startOfDay(now),tom=addDays(t,1),y=t.getFullYear(),m=t.getMonth();
+  if(key==='7d')return[addDays(tom,-7),tom];
+  if(key==='30d')return[addDays(tom,-30),tom];
+  if(key==='90d')return[addDays(tom,-90),tom];
+  if(key==='mtd')return[new Date(y,m,1),tom];
+  if(key==='lastm')return[new Date(y,m-1,1),new Date(y,m,1)];
+  if(key==='ytd')return[new Date(y,0,1),tom];
+  if(key==='12m')return[addDays(tom,-365),tom];
+  if(key==='custom'&&custom&&custom.from&&custom.to){var f=startOfDay(custom.from+'T00:00:00'),e=addDays(startOfDay(custom.to+'T00:00:00'),1);if(e>f)return[f,e]}
+  return[addDays(tom,-30),tom];
+}
+function prevRange(r,mode){
+  if(mode==='none')return null;
+  if(mode==='yoy'){var s=new Date(r[0]);s.setFullYear(s.getFullYear()-1);var e=new Date(r[1]);e.setFullYear(e.getFullYear()-1);return[s,e]}
+  var len=Math.round((r[1]-r[0])/864e5);return[addDays(r[0],-len),new Date(r[0])];
+}
+function inR(d,r){var t=+new Date(d);return t>=+r[0]&&t<+r[1]}
+function computeMetrics(D,r,includeManual){
+  var m={productRev:0,shipRev:0,tax:0,orders:0,feet:0,cogs:0,fees:0,missingCost:0,missingFee:0,manualRev:0,manualExp:0,dealers:{},newDealers:0};
+  D.orders.forEach(function(o){
+    if((o.status!=='paid'&&o.status!=='shipped')||!o.paid_at||!inR(o.paid_at,r))return;
+    m.orders++;m.productRev+=o.subtotal_cents||0;m.shipRev+=o.shipping_cents||0;m.tax+=o.tax_cents||0;m.feet+=o.lights_ft||0;m.dealers[o.dealer_id]=1;
+    var pv=(D.priv||{})[o.id]||{};
+    if(pv.cogs_cents==null)m.missingCost++;else{m.cogs+=pv.cogs_cents;if(pv.cost_missing)m.missingCost++}
+    if(pv.stripe_fee_cents==null)m.missingFee++;else m.fees+=pv.stripe_fee_cents;
+  });
+  if(includeManual)D.ledger.forEach(function(e){
+    if(e.voided||!inR(e.entry_date+'T00:00:00',r))return;
+    if(e.kind==='revenue')m.manualRev+=e.amount_cents;else m.manualExp+=e.amount_cents;
+  });
+  m.revenue=m.productRev+m.shipRev+m.manualRev;
+  m.net=m.revenue-m.cogs-m.fees-m.manualExp;
+  m.activeDealers=Object.keys(m.dealers).length;
+  Object.keys(D.firstPaid).forEach(function(id){if(inR(D.firstPaid[id],r))m.newDealers++});
+  m.aov=m.orders?Math.round((m.productRev+m.shipRev)/m.orders):0;
+  return m;
+}
+function delta(cur,prev){
+  if(prev==null)return null;
+  if(prev===0)return cur===0?{dir:0,text:'0%'}:{dir:cur>0?1:-1,text:'new'};
+  var p=(cur-prev)/Math.abs(prev);
+  var dir=Math.abs(p)<0.0005?0:(p>0?1:-1);
+  return{dir:dir,text:(p>=0?'+':'−')+(Math.abs(p)*100).toFixed(1)+'%'};
+}
+function bucketize(D,r,includeManual){
+  var days=Math.round((r[1]-r[0])/864e5),mode=days<=45?'day':(days<=200?'week':'month'),starts=[],cur=new Date(r[0]);
+  if(mode==='week'){var dow=(cur.getDay()+6)%7;cur=addDays(cur,-dow)}
+  if(mode==='month')cur=new Date(cur.getFullYear(),cur.getMonth(),1);
+  while(cur<r[1]){starts.push(new Date(cur));cur=mode==='day'?addDays(cur,1):mode==='week'?addDays(cur,7):new Date(cur.getFullYear(),cur.getMonth()+1,1)}
+  var out=starts.map(function(s,i){return{start:s,end:starts[i+1]||(mode==='day'?addDays(s,1):mode==='week'?addDays(s,7):new Date(s.getFullYear(),s.getMonth()+1,1)),cents:0}});
+  function put(t,c){for(var i=0;i<out.length;i++){if(+t>=+out[i].start&&+t<+out[i].end){out[i].cents+=c;return}}}
+  D.orders.forEach(function(o){if((o.status==='paid'||o.status==='shipped')&&o.paid_at&&inR(o.paid_at,r))put(new Date(o.paid_at),(o.subtotal_cents||0)+(o.shipping_cents||0))});
+  if(includeManual)D.ledger.forEach(function(e){if(!e.voided&&e.kind==='revenue'){var t=new Date(e.entry_date+'T00:00:00');if(inR(t,r))put(t,e.amount_cents)}});
+  return{mode:mode,buckets:out};
+}
+// ---PURE-END---
+
+var S={user:null,D:null,range:'30d',compare:'prev',manual:true,custom:{from:'',to:''},orderFilter:'requested',tab:'overview',settings:{}};
+
+/* helper: call a server function and always return a readable message */
+function fn(name,body){
+  return db.functions.invoke(name,{body:body}).then(function(r){
+    if(!r.error)return{ok:true,data:r.data};
+    var c=r.error.context;
+    if(c&&c.json)return c.json().then(function(j){return{ok:false,error:(j&&j.error)||'Request failed.'}}).catch(function(){return{ok:false,error:'Request failed.'}});
+    return{ok:false,error:'Request failed.'};
+  });
+}
+function fetchAll(table,cols,orderCol){
+  var out=[],from=0,page=1000;
+  function next(){
+    var q=db.from(table).select(cols);if(orderCol)q=q.order(orderCol,{ascending:false});
+    return q.range(from,from+page-1).then(function(r){
+      if(r.error)throw r.error;out=out.concat(r.data||[]);
+      if((r.data||[]).length===page){from+=page;return next()}return out});
+  }
+  return next();
+}
+function msg(el,t,k){el.className='msg '+(k||'err');el.textContent=t}
+function show(id){['vLogin','vDenied','vMfa','vEnroll','vApp'].forEach(function(v){$(v).hidden=(v!==id)});$('topbtns').hidden=(id==='vLogin')}
+
+/* ── Auth + 2FA ── */
+$('fLogin').addEventListener('submit',function(e){e.preventDefault();
+  db.auth.signInWithPassword({email:$('em').value.trim(),password:$('pw').value}).then(function(r){
+    if(r.error){msg($('loginMsg'),'That email and password don\'t match.');return}gate()})});
+function out(){db.auth.signOut().then(function(){S.D=null;show('vLogin')})}
+$('signOut').addEventListener('click',out);$('deniedOut').addEventListener('click',out);
+$('refresh').addEventListener('click',function(){load().then(renderTab)});
+function gate(){
+  db.auth.getSession().then(function(r){
+    if(!r.data.session){show('vLogin');return}
+    S.user=r.data.session.user;
+    db.from('admins').select('user_id').eq('user_id',S.user.id).maybeSingle().then(function(a){
+      if(!a.data){show('vDenied');return}
+      db.auth.mfa.getAuthenticatorAssuranceLevel().then(function(l){
+        if(l.data.currentLevel==='aal2'){start();return}
+        db.auth.mfa.listFactors().then(function(f){
+          var all=(f.data&&f.data.all)||[],ver=all.filter(function(x){return x.factor_type==='totp'&&x.status==='verified'})[0];
+          if(ver){S.factor=ver.id;show('vMfa');return}
+          var jobs=all.filter(function(x){return x.status!=='verified'}).map(function(x){return db.auth.mfa.unenroll({factorId:x.id})});
+          Promise.all(jobs).then(enroll);
+        });
+      });
+    });
+  });
+}
+function enroll(){
+  db.auth.mfa.enroll({factorType:'totp',friendlyName:'Staff '+Date.now()}).then(function(r){
+    if(r.error){show('vEnroll');msg($('enrollMsg'),r.error.message);return}
+    S.factor=r.data.id;var img=new Image();img.alt='QR code';img.width=180;img.height=180;img.src=r.data.totp.qr_code;$('qr').innerHTML='';$('qr').appendChild(img);
+    $('secret').textContent='Can\'t scan? Enter this key: '+r.data.totp.secret;show('vEnroll');
+  });
+}
+function verify(code,mEl){
+  return db.auth.mfa.challengeAndVerify({factorId:S.factor,code:code.trim()}).then(function(r){
+    if(r.error){msg(mEl,'That code didn\'t work. Try the newest one.');return}start()});
+}
+$('fMfa').addEventListener('submit',function(e){e.preventDefault();verify($('mc').value,$('mfaMsg'))});
+$('fEnroll').addEventListener('submit',function(e){e.preventDefault();verify($('ec').value,$('enrollMsg'))});
+
+/* ── Data ── */
+function start(){show('vApp');load().then(function(){S.tab='overview';switchTab('overview')}).catch(function(e){console.error(e);alert('Could not load data. Check that 02-dashboard.sql has been run.')})}
+function load(){
+  return Promise.all([
+    fetchAll('orders','*','created_at'),
+    fetchAll('dealers','*','created_at'),
+    fetchAll('ledger_entries','*','entry_date'),
+    fetchAll('order_private','*','order_id'),
+    db.from('product_costs').select('*'),
+    db.from('dealer_private').select('*'),
+    db.from('products').select('*').order('sort'),
+    db.from('prices').select('*'),
+    db.from('settings').select('*'),
+    db.from('state_zones').select('*').order('state'),
+    db.from('shipping_rates').select('*').order('zone').order('max_weight_g')
+  ]).then(function(r){
+    var priv=r[3],pc=r[4].data||[],dp=r[5].data||[];r=[r[0],r[1],r[2]].concat(r.slice(6));
+    var D={orders:r[0],dealers:r[1],ledger:r[2],products:r[3].data||[],prices:r[4].data||[],zones:r[6].data||[],rates:r[7].data||[],dealerById:{},firstPaid:{},priv:{}};
+    priv.forEach(function(x){D.priv[x.order_id]=x});
+    var cost={};pc.forEach(function(x){cost[x.product_id]=x.cost_cents});D.products.forEach(function(p){p.cost_cents=cost[p.id]==null?null:cost[p.id]});
+    var note={};dp.forEach(function(x){note[x.dealer_id]=x.admin_note});D.dealers.forEach(function(d){d.admin_note=note[d.id]||''});
+    D.dealers.forEach(function(d){D.dealerById[d.id]=d});
+    D.orders.forEach(function(o){if((o.status==='paid'||o.status==='shipped')&&o.paid_at){var t=new Date(o.paid_at);if(!D.firstPaid[o.dealer_id]||t<D.firstPaid[o.dealer_id])D.firstPaid[o.dealer_id]=t}});
+    S.settings={};(r[5].data||[]).forEach(function(x){S.settings[x.key]=x.value});
+    S.D=D;
+  });
+}
+function dn(id){var d=S.D.dealerById[id];return d?(d.business_name||d.email||'Dealer'):'Dealer'}
+
+/* ── Tabs ── */
+$('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(b)switchTab(b.getAttribute('data-t'))});
+function switchTab(t){S.tab=t;document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-t')===t)});
+  ['overview','orders','dealers','products','ledger','shipping','goals','audit'].forEach(function(x){$('p-'+x).hidden=(x!==t)});renderTab()}
+function renderTab(){({overview:rOverview,orders:rOrders,dealers:rDealers,products:rProducts,ledger:rLedger,shipping:rShipping,goals:rGoals,audit:rAudit})[S.tab]()}
+
+/* ── Overview ── */
+var RANGES=[['7d','Last 7 days'],['30d','Last 30 days'],['90d','Last 90 days'],['mtd','This month'],['lastm','Last month'],['ytd','Year to date'],['12m','Last 12 months'],['custom','Custom…']];
+function rangeLabel(r){var days=Math.round((r[1]-r[0])/864e5);return fmtDate(r[0])+' – '+fmtDate(addDays(r[1],-1))+' ('+days+' d)'}
+function rOverview(){
+  var D=S.D,r=rangeFor(S.range,new Date(),S.custom),pr=prevRange(r,S.compare);
+  var cur=computeMetrics(D,r,S.manual),prv=pr?computeMetrics(D,pr,S.manual):null;
+  var cmpLbl=S.compare==='yoy'?'vs same period last year':'vs previous period';
+  var tiles=[
+    ['Revenue (excl. tax)','revenue',money,cur.manualRev?'incl. '+money(cur.manualRev)+' manual':'Stripe-verified'],
+    ['Net profit (est.)','net',money,cur.missingCost?cur.missingCost+' order(s) missing a product cost':(cur.missingFee?cur.missingFee+' order(s) missing fee':'After product cost, fees, expenses')],
+    ['Paid orders','orders',function(v){return String(v)},''],
+    ['Feet of lights sold','feet',function(v){return v.toLocaleString()+' ft'},'Counts toward dealer tiers'],
+    ['Average order','aov',money,'Revenue ÷ paid orders'],
+    ['New dealers','newDealers',function(v){return String(v)},'First paid order in period'],
+    ['Active dealers','activeDealers',function(v){return String(v)},'Paid at least once in period'],
+    ['Sales tax collected','tax',money,'Not revenue. Set aside for filing']
+  ];
+  var h='<div class="bar">'
+   +'<div><label for="rg">Timeframe</label><select id="rg">'+RANGES.map(function(x){return'<option value="'+x[0]+'"'+(S.range===x[0]?' selected':'')+'>'+x[1]+'</option>'}).join('')+'</select></div>'
+   +(S.range==='custom'?'<div><label for="cf">From</label><input id="cf" type="date" value="'+esc(S.custom.from)+'"></div><div><label for="ct">To</label><input id="ct" type="date" value="'+esc(S.custom.to)+'"></div>':'')
+   +'<div><label for="cp">Compare to</label><select id="cp"><option value="prev"'+(S.compare==='prev'?' selected':'')+'>Previous period</option><option value="yoy"'+(S.compare==='yoy'?' selected':'')+'>Same period last year</option><option value="none"'+(S.compare==='none'?' selected':'')+'>No comparison</option></select></div>'
+   +'<div style="min-width:200px"><label>&nbsp;</label><label style="display:flex;gap:8px;align-items:center;margin:0;font-size:.85rem;color:#fff"><input type="checkbox" id="mn"'+(S.manual?' checked':'')+'> Include manual ledger entries</label></div></div>'
+   +'<p class="small" style="margin-bottom:12px">'+esc(rangeLabel(r))+(pr?' · compared with '+esc(rangeLabel(pr)):'')+'</p>';
+  // snapshot alerts
+  var req=D.orders.filter(function(o){return o.status==='requested'}),inv=D.orders.filter(function(o){return o.status==='invoiced'});
+  var overdue=inv.filter(function(o){return o.due_at&&new Date(o.due_at)<new Date()}),openTotal=inv.reduce(function(s,o){return s+(o.total_cents||0)},0);
+  if(req.length)h+='<div class="note"><b>'+req.length+' order request'+(req.length>1?'s':'')+' waiting for approval.</b> <button class="btn sm" data-go="orders" type="button">Review</button></div>';
+  h+='<div class="kpis">'+tiles.map(function(t){
+    var c=cur[t[1]],p=prv?prv[t[1]]:null,d=prv?delta(c,p):null,dh='';
+    if(d){var cls=d.dir>0?'up':d.dir<0?'down':'flat',ar=d.dir>0?'▲':d.dir<0?'▼':'■';dh='<div class="delta '+cls+'"><span aria-hidden="true">'+ar+'</span><span>'+esc(d.text)+'</span><span class="vs">'+cmpLbl+'</span></div>'}
+    return'<div class="card kpi"><div class="k">'+esc(t[0])+'</div><div class="v">'+t[2](c)+'</div>'+dh+'<div class="sub">'+esc(t[3])+'</div></div>'}).join('')
+   +'<div class="card kpi"><div class="k">Open invoices</div><div class="v">'+money(openTotal)+'</div><div class="sub">'+inv.length+' unpaid'+(overdue.length?' · <span class="down">'+overdue.length+' overdue</span>':'')+'</div></div></div>';
+  // chart + goals
+  h+='<div class="grid2"><div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Revenue over time</h3><button class="btn ghost sm" id="tblToggle" type="button">Show table</button></div><div class="chart" id="chart"></div><div id="chartTable" hidden></div></div>'
+   +'<div class="card"><h3>This month vs goals</h3><div id="goalsBox"></div></div></div>';
+  // top dealers + product mix
+  var byD={},byP={};
+  D.orders.forEach(function(o){if((o.status==='paid'||o.status==='shipped')&&o.paid_at&&inR(o.paid_at,r)){
+    var x=byD[o.dealer_id]=byD[o.dealer_id]||{c:0,n:0,ft:0};x.c+=(o.subtotal_cents||0)+(o.shipping_cents||0);x.n++;x.ft+=o.lights_ft||0;
+    (o.items||[]).forEach(function(l){var y=byP[l.sku]=byP[l.sku]||{name:l.name,c:0,q:0};y.c+=l.line_cents||0;y.q+=l.pieces||0})}});
+  var dl=Object.keys(byD).map(function(k){return[k,byD[k]]}).sort(function(a,b){return b[1].c-a[1].c}).slice(0,8);
+  var pl=Object.keys(byP).map(function(k){return byP[k]}).sort(function(a,b){return b.c-a.c});
+  h+='<div class="grid2" style="margin-top:14px"><div class="card"><h3>Top dealers</h3><div class="scroll"><table><tr><th>Dealer</th><th class="n">Orders</th><th class="n">Feet</th><th class="n">Revenue</th></tr>'
+   +(dl.length?dl.map(function(x){return'<tr><td>'+esc(dn(x[0]))+'</td><td class="n">'+x[1].n+'</td><td class="n">'+x[1].ft.toLocaleString()+'</td><td class="n">'+money(x[1].c)+'</td></tr>'}).join(''):'<tr><td colspan="4" class="empty">No paid orders in this period.</td></tr>')
+   +'</table></div></div><div class="card"><h3>Product mix</h3><div class="scroll"><table><tr><th>Product</th><th class="n">Pieces</th><th class="n">Sales</th></tr>'
+   +(pl.length?pl.map(function(x){return'<tr><td>'+esc(x.name)+'</td><td class="n">'+x.q.toLocaleString()+'</td><td class="n">'+money(x.c)+'</td></tr>'}).join(''):'<tr><td colspan="3" class="empty">Nothing yet.</td></tr>')
+   +'</table></div></div></div>';
+  h+='<div class="card" style="margin-top:14px"><h3>How these numbers stay accurate</h3><p class="small" style="margin-top:6px">Revenue, orders, feet, tax, and fees come only from Stripe-confirmed paid orders. They can\'t be edited here. The database blocks changes to order amounts. To add money Stripe never saw (an offline sale, shipping-label cost, software, ads), use the <b>Ledger</b>, which is dated, categorized, and audit-logged. Turn off “Include manual ledger entries” to see Stripe-verified numbers only. Every edit anywhere is recorded in the <b>Audit log</b>.</p></div>';
+  $('p-overview').innerHTML=h;
+  $('rg').onchange=function(){S.range=this.value;rOverview()};
+  $('cp').onchange=function(){S.compare=this.value;rOverview()};
+  $('mn').onchange=function(){S.manual=this.checked;rOverview()};
+  if($('cf')){$('cf').onchange=function(){S.custom.from=this.value;rOverview()};$('ct').onchange=function(){S.custom.to=this.value;rOverview()}}
+  document.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){switchTab(b.getAttribute('data-go'))}});
+  drawChart(bucketize(D,r,S.manual));drawGoals();
+  $('tblToggle').onclick=function(){var t=$('chartTable'),c=$('chart');t.hidden=!t.hidden;c.hidden=!t.hidden;this.textContent=t.hidden?'Show table':'Show chart'};
+}
+function bucketLabel(mode,s){return mode==='month'?s.toLocaleDateString('en-US',{month:'short',year:'2-digit'}):s.toLocaleDateString('en-US',{month:'short',day:'numeric'})}
+function drawChart(b){
+  var B=b.buckets,W=Math.max(300,Math.min(900,$('chart').clientWidth||640)),H=250,pl=52,pr=8,pt=14,pb=30,max=Math.max.apply(null,B.map(function(x){return x.cents}).concat([1]));
+  var step=niceStep(max/4),top=Math.ceil(max/step)*step||step,iw=W-pl-pr,ih=H-pt-pb,bw=Math.max(2,Math.min(28,iw/B.length-2));
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Revenue over time, by '+b.mode+'">';
+  for(var g=0;g<=top;g+=step){var y=pt+ih-(g/top)*ih;svg+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y+'" y2="'+y+'" stroke="var(--grid)"/><text x="'+(pl-6)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="#A0A0AE">'+money(g,0)+'</text>'}
+  var every=Math.ceil(B.length/8);
+  B.forEach(function(x,i){
+    var cx=pl+(i+.5)*(iw/B.length),h=(x.cents/top)*ih,bx=cx-bw/2,by=pt+ih-h;
+    if(h>0)svg+='<path d="M'+bx+','+(pt+ih)+'V'+(by+Math.min(4,h))+'Q'+bx+','+by+' '+(bx+Math.min(4,bw/2))+','+by+'H'+(bx+bw-Math.min(4,bw/2))+'Q'+(bx+bw)+','+by+' '+(bx+bw)+','+(by+Math.min(4,h))+'V'+(pt+ih)+'Z" fill="var(--s1)"/>';
+    svg+='<rect class="hit" data-i="'+i+'" x="'+(cx-iw/B.length/2)+'" y="'+pt+'" width="'+(iw/B.length)+'" height="'+ih+'" fill="transparent"/>';
+    if(i%every===0)svg+='<text x="'+cx+'" y="'+(H-10)+'" text-anchor="middle" font-size="11" fill="#A0A0AE">'+esc(bucketLabel(b.mode,x.start))+'</text>';
+  });
+  svg+='</svg><div class="tip" id="tip"></div>';$('chart').innerHTML=svg;
+  var tip=$('tip');
+  $('chart').onmousemove=function(e){var t=e.target.closest('.hit');if(!t){tip.style.display='none';return}
+    var x=B[+t.getAttribute('data-i')],rc=$('chart').getBoundingClientRect();
+    tip.innerHTML='<b>'+esc(bucketLabel(b.mode,x.start))+(b.mode==='week'?' (week)':'')+'</b><br>'+money(x.cents);tip.style.display='block';
+    tip.style.left=Math.min(e.clientX-rc.left+12,rc.width-130)+'px';tip.style.top=(e.clientY-rc.top-10)+'px'};
+  $('chart').onmouseleave=function(){tip.style.display='none'};
+  $('chartTable').innerHTML='<div class="scroll"><table><tr><th>'+(b.mode==='month'?'Month':b.mode==='week'?'Week of':'Day')+'</th><th class="n">Revenue</th></tr>'+B.map(function(x){return'<tr><td>'+esc(bucketLabel(b.mode,x.start))+'</td><td class="n">'+money(x.cents)+'</td></tr>'}).join('')+'</table></div>';
+}
+function niceStep(v){if(v<=0)return 100;var p=Math.pow(10,Math.floor(Math.log10(v))),n=v/p;return(n<=1?1:n<=2?2:n<=5?5:10)*p}
+function drawGoals(){
+  var now=new Date(),r=rangeFor('mtd',now),m=computeMetrics(S.D,r,S.manual);
+  var gs=[['Revenue',m.revenue,parseInt(S.settings.goal_revenue_cents||'0'),money],['Feet of lights',m.feet,parseInt(S.settings.goal_lights_ft||'0'),function(v){return v.toLocaleString()+' ft'}],['New dealers',m.newDealers,parseInt(S.settings.goal_new_dealers||'0'),String]];
+  var h='';gs.forEach(function(g){
+    if(!g[2]){h+='<div class="goal"><div class="t"><span>'+g[0]+'</span><span class="small">No goal set</span></div></div>';return}
+    var pct=Math.min(100,g[1]/g[2]*100);
+    h+='<div class="goal"><div class="t"><span>'+g[0]+'</span><span>'+g[3](g[1])+' / '+g[3](g[2])+' · '+Math.round(g[1]/g[2]*100)+'%</span></div><div class="track"><i style="width:'+pct+'%"></i></div></div>'});
+  $('goalsBox').innerHTML=h+'<button class="btn ghost sm" data-go="goals" type="button" style="margin-top:6px">Edit goals</button>';
+  $('goalsBox').querySelector('[data-go]').onclick=function(){switchTab('goals')};
+}
+
+/* ── Orders ── */
+var STAT_PILL={requested:'warn',approved:'info',invoiced:'info',paid:'ok',shipped:'ok',cancelled:''};
+function rOrders(){
+  var D=S.D,cnt={};D.orders.forEach(function(o){cnt[o.status]=(cnt[o.status]||0)+1});
+  var f=S.orderFilter,list=D.orders.filter(function(o){return f==='all'||o.status===f});
+  var h='<div style="margin-bottom:12px"><button class="btn" id="newOrderBtn" type="button">+ New order</button></div><div id="newOrder" hidden></div><div class="chips">'+['requested','approved','invoiced','paid','shipped','cancelled','all'].map(function(s){return'<button class="chip'+(f===s?' on':'')+'" data-f="'+s+'" type="button">'+s[0].toUpperCase()+s.slice(1)+(s!=='all'&&cnt[s]?' ('+cnt[s]+')':'')+'</button>'}).join('')+'</div>';
+  if(!list.length)h+='<p class="empty">No orders here.</p>';
+  list.forEach(function(o){
+    var d=D.dealerById[o.dealer_id]||{},sh=o.ship_to||{},late=o.status==='invoiced'&&o.due_at&&(Date.now()-new Date(o.due_at))>7*864e5;
+    h+='<div class="card order" data-id="'+o.id+'"><div class="h"><div><b>#'+o.id+'</b> · '+esc(d.business_name||d.email||'Dealer')+' <span class="pill '+(STAT_PILL[o.status]||'')+'">'+esc(o.status)+'</span>'+(late?' <span class="pill bad">14+ days unpaid</span>':'')+(d.tax_exempt?' <span class="pill info">tax-exempt</span>':'')+(sh.state&&String(sh.state).toUpperCase()!=='MN'?' <span class="pill info">ships out of MN ('+esc(sh.state)+')</span>':'')+'</div><div class="small">'+esc(fmtDT(o.created_at))+'</div></div>'
+     +'<div class="scroll"><table><tr><th>Item</th><th class="n">Pieces</th><th class="n">Unit</th><th class="n">Line</th></tr>'+(o.items||[]).map(function(l){return'<tr><td>'+esc(l.name)+(l.color?' — '+esc(l.color):'')+(l.mode==='per_meter'?'<div class="small">'+esc(l.feet_requested)+' ft entered → '+esc(l.billed_feet)+' ft billed</div>':'')+'</td><td class="n">'+esc(l.pieces)+'</td><td class="n">'+money(l.unit_cents)+'</td><td class="n">'+money(l.line_cents)+'</td></tr>'}).join('')+'</table></div>'
+     +'<p class="small" style="margin-top:8px">Ship to: '+esc([sh.name,sh.line1,sh.line2,sh.city,sh.state,sh.zip].filter(Boolean).join(', '))+'</p>'
+     +(o.dealer_note?'<p class="small">Dealer note: '+esc(o.dealer_note)+'</p>':'')
+     +'<p class="small">Subtotal '+money(o.subtotal_cents)+(o.shipping_cents!=null?' · Shipping '+money(o.shipping_cents):'')+(o.tax_cents!=null?' · Tax '+money(o.tax_cents):'')+(o.total_cents!=null?' · <b>Total '+money(o.total_cents)+'</b>':'')+(o.stripe_fee_cents!=null?' · Stripe fee '+money(o.stripe_fee_cents):'')+'</p>'
+     +(o.invoice_url&&/^https:\/\//.test(o.invoice_url)?'<p class="small"><a href="'+esc(o.invoice_url)+'" target="_blank" rel="noopener">Open Stripe invoice</a>'+(o.due_at?' · due '+esc(fmtDate(o.due_at)):'')+'</p>':'')
+     +'<div class="acts">';
+    if(o.status==='requested')h+='<div><label>Shipping &amp; handling ($)</label><input class="ship" inputmode="decimal" value="'+(o.shipping_cents!=null?(o.shipping_cents/100).toFixed(2):'')+'" placeholder="0.00"></div><button class="btn good approve" type="button">Approve &amp; send invoice</button><button class="btn ghost cancel" type="button">Decline</button>';
+    if(o.status==='invoiced')h+='<button class="btn ghost cancel" type="button">Void invoice &amp; cancel</button>';
+    if(o.status==='paid')h+='<div><label>Tracking number</label><input class="track" placeholder="Carrier + number"></div><div><label>Carrier cost ($, optional)</label><input class="carrier" inputmode="decimal" placeholder="for ledger"></div><button class="btn blue shipit" type="button">Mark shipped</button>';
+    if(o.status==='shipped'&&o.tracking)h+='<span class="small">Tracking: '+esc(o.tracking)+'</span>';
+    h+='</div><div class="msg"></div></div>';
+  });
+  $('p-orders').innerHTML=h;
+  $('newOrderBtn').onclick=openNewOrder;
+}
+/* ── Create an order yourself (phone order, custom charge, discount) ── */
+function openNewOrder(){
+  var box=$('newOrder');if(!box.hidden){box.hidden=true;return}
+  var D=S.D,dl=D.dealers.slice().sort(function(a,b){return String(a.business_name||a.email).localeCompare(String(b.business_name||b.email))});
+  box.hidden=false;
+  box.innerHTML='<div class="card" style="margin-bottom:14px"><h3>New order</h3><p class="small">Pick the dealer, add items, then send the invoice now or save it as a request. Prices and tier come from the same server rules as dealer orders.</p>'
+   +'<label for="nod">Dealer</label><select id="nod"><option value="">Select a dealer…</option>'+dl.map(function(d){return'<option value="'+esc(d.id)+'">'+esc(d.business_name||d.email)+(d.approved?'':' (not activated)')+'</option>'}).join('')+'</select>'
+   +'<div id="nlines"></div><button class="btn ghost sm" id="naddl" type="button" style="margin-top:8px">+ Add line</button>'
+   +'<h3 style="margin:16px 0 0;font-size:1.05rem">Ship to</h3><div class="row2"><div><label for="nsn">Name / business</label><input id="nsn"></div><div><label for="nsl">Street</label><input id="nsl"></div><div><label for="nsc">City</label><input id="nsc"></div>'
+   +'<div><label for="nss">State</label><input id="nss" maxlength="2" style="text-transform:uppercase"></div><div><label for="nsz">ZIP</label><input id="nsz" maxlength="10"></div><div><label for="nsh">Shipping &amp; handling ($)</label><input id="nsh" inputmode="decimal" placeholder="0.00"></div></div>'
+   +'<label for="nnote">Note</label><input id="nnote" maxlength="500"><div id="nout" style="margin-top:12px"></div>'
+   +'<div class="acts" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn ghost" id="nprev" type="button">Preview totals</button><button class="btn good" id="nsend" type="button">Create &amp; send invoice</button><button class="btn ghost" id="nsave" type="button">Save as request only</button><button class="btn ghost" id="ncancel" type="button">Close</button></div><div class="msg" id="nmsg"></div></div>';
+  var lines=$('nlines');
+  function addLine(){
+    var d=document.createElement('div');d.className='nline';d.style.cssText='display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:8px;align-items:end;margin-top:8px';
+    d.innerHTML='<div><label>Item</label><select class="lp"><option value="">Select…</option>'+D.products.filter(function(p){return p.active}).map(function(p){return'<option value="'+esc(p.sku)+'">'+esc(p.name)+'</option>'}).join('')+'<option value="CUSTOM">Custom line / discount…</option></select></div>'
+     +'<div class="qf"><label class="ql">Feet</label><input class="lf" inputmode="decimal"></div><div class="cf" hidden><label>RAL color</label><input class="lcol" maxlength="40"></div>'
+     +'<div class="xf" hidden style="grid-column:1/-1;display:none"><div class="row2"><div><label>Description</label><input class="ld" maxlength="120"></div><div><label>Amount ($, negative = discount)</label><input class="la" inputmode="decimal"></div></div></div>';
+    lines.appendChild(d);
+    d.querySelector('.lp').onchange=function(){
+      var sku=this.value,p=D.products.filter(function(x){return x.sku===sku})[0],custom=sku==='CUSTOM';
+      d.querySelector('.qf').style.display=custom?'none':'';d.querySelector('.cf').hidden=!(p&&p.requires_color);
+      var xf=d.querySelector('.xf');xf.hidden=!custom;xf.style.display=custom?'block':'none';
+      d.querySelector('.ql').textContent=p&&p.pricing_mode==='each'?'Qty':'Feet';
+    };
+  }
+  addLine();$('naddl').onclick=addLine;$('ncancel').onclick=function(){box.hidden=true};
+  $('nod').onchange=function(){
+    var id=this.value,d=D.dealerById[id],last=D.orders.filter(function(o){return o.dealer_id===id&&o.ship_to})[0],sh=(last&&last.ship_to)||(d&&d.ship_to)||{};
+    $('nsn').value=sh.name||(d&&d.business_name)||'';$('nsl').value=sh.line1||'';$('nsc').value=sh.city||'';$('nss').value=sh.state||'';$('nsz').value=sh.zip||'';
+  };
+  function collect(){
+    var items=[];
+    lines.querySelectorAll('.nline').forEach(function(r){
+      var sku=r.querySelector('.lp').value;if(!sku)return;
+      if(sku==='CUSTOM'){var c=toCents(r.querySelector('.la').value);items.push({sku:'CUSTOM',description:r.querySelector('.ld').value,amount_cents:c});return}
+      var p=D.products.filter(function(x){return x.sku===sku})[0],v=parseFloat(r.querySelector('.lf').value),it={sku:sku};
+      if(p.pricing_mode==='per_meter')it.feet=v;else it.qty=v;
+      if(p.requires_color)it.color=r.querySelector('.lcol').value;items.push(it)});
+    return items;
+  }
+  function ship(){return{name:$('nsn').value,line1:$('nsl').value,city:$('nsc').value,state:$('nss').value,zip:$('nsz').value}}
+  var m=$('nmsg');
+  $('nprev').onclick=function(){
+    m.className='msg';if(!$('nod').value){msg(m,'Pick a dealer first.');return}
+    fn('submit-order',{on_behalf_of:$('nod').value,items:collect(),ship_to:{state:$('nss').value},preview:true}).then(function(r){
+      if(!r.ok){msg(m,r.error);$('nout').innerHTML='';return}
+      var d=r.data,sh=toCents($('nsh').value)||0;
+      $('nout').innerHTML='<div class="scroll"><table><tr><th>Item</th><th class="n">Pieces</th><th class="n">Line</th></tr>'+d.lines.map(function(l){return'<tr><td>'+esc(l.name)+(l.color?' — '+esc(l.color):'')+(l.mode==='per_meter'?'<div class="small">'+esc(l.feet_requested)+' ft → '+esc(l.billed_feet)+' ft billed</div>':'')+'</td><td class="n">'+esc(l.pieces)+'</td><td class="n">'+money(l.line_cents)+'</td></tr>'}).join('')
+       +'<tr><td colspan="2" class="n"><b>Subtotal</b> (tier: '+esc(d.tier)+')</td><td class="n"><b>'+money(d.subtotal_cents)+'</b></td></tr><tr><td colspan="2" class="n">Shipping &amp; handling</td><td class="n">'+money(sh)+'</td></tr></table></div><p class="small">Sales tax is added by Stripe on the invoice.</p>';
+      m.className='msg'});
+  };
+  function create(sendNow){
+    m.className='msg';var items=collect(),sh=toCents($('nsh').value);
+    if(!$('nod').value){msg(m,'Pick a dealer first.');return}
+    if(sendNow&&(sh==null||sh<0)){msg(m,'Enter shipping & handling (0 if none) before sending the invoice.');return}
+    if(sendNow&&!confirm('Create this order and email the Stripe invoice to the dealer now?'))return;
+    fn('submit-order',{on_behalf_of:$('nod').value,items:items,ship_to:ship(),note:$('nnote').value}).then(function(r){
+      if(!r.ok){msg(m,r.error);return}
+      var id=r.data.order_id;
+      if(!sendNow){load().then(function(){S.orderFilter='requested';rOrders()});return}
+      fn('approve-order',{order_id:id,shipping_cents:sh}).then(function(a){
+        if(!a.ok){msg(m,'Order #'+id+' was created but the invoice was not sent: '+a.error+' You can finish it from the Requested list.');load();return}
+        load().then(function(){S.orderFilter='invoiced';rOrders()})});
+    });
+  }
+  $('nsend').onclick=function(){create(true)};$('nsave').onclick=function(){create(false)};
+}
+$('p-orders').addEventListener('click',function(e){
+  var chip=e.target.closest('[data-f]');if(chip){S.orderFilter=chip.getAttribute('data-f');rOrders();return}
+  var card=e.target.closest('.order');if(!card)return;var id=+card.getAttribute('data-id'),m=card.querySelector('.msg'),btn=e.target.closest('button');if(!btn)return;
+  var o=S.D.orders.filter(function(x){return x.id===id})[0];
+  if(btn.classList.contains('approve')){
+    var c=toCents(card.querySelector('.ship').value);if(c==null||c<0){msg(m,'Enter the shipping & handling amount (0 if none).');return}
+    if(!confirm('Send Stripe invoice for order #'+id+' with '+money(c)+' shipping & handling? The dealer is emailed immediately.'))return;
+    btn.disabled=true;btn.textContent='Creating invoice…';
+    fn('approve-order',{order_id:id,shipping_cents:c}).then(function(r){
+      if(!r.ok){btn.disabled=false;btn.textContent='Approve & send invoice';msg(m,r.error);return}
+      load().then(function(){S.orderFilter='invoiced';rOrders()})});
+  }
+  if(btn.classList.contains('cancel')){
+    if(!confirm(o.status==='invoiced'?'Void the Stripe invoice and cancel this order?':'Decline this order request?'))return;
+    fn('approve-order',{action:'cancel',order_id:id}).then(function(r){if(!r.ok){msg(m,r.error);return}load().then(rOrders)});
+  }
+  if(btn.classList.contains('shipit')){
+    var tr=card.querySelector('.track').value.trim(),cc=card.querySelector('.carrier').value.trim();
+    if(!tr){msg(m,'Enter the tracking number.');return}
+    db.from('orders').update({status:'shipped',tracking:tr}).eq('id',id).then(function(r){
+      if(r.error){msg(m,r.error.message);return}
+      var carrier=toCents(cc);
+      var p=carrier?db.from('ledger_entries').insert({entry_date:new Date().toISOString().slice(0,10),kind:'expense',category:'Shipping labels',amount_cents:carrier,description:'Order #'+id+' carrier cost'}):Promise.resolve();
+      p.then(function(){load().then(rOrders)})});
+  }
+});
+
+/* ── Dealers ── */
+function rDealers(){
+  var D=S.D,h='<div class="card" style="margin-bottom:14px"><h3>Invite a dealer</h3><p class="small">Sends them an email to set their own password. Only tick “activate now” after their Dealer Agreement and NDA are signed.</p>'
+   +'<div class="row2"><div><label>Email</label><input id="ie" type="email"></div><div><label>Business name</label><input id="ib"></div><div><label>Contact name</label><input id="ic"></div><div><label>Phone</label><input id="ip"></div></div>'
+   +'<label style="display:flex;gap:8px;align-items:center;color:#fff"><input type="checkbox" id="ia"> Agreement signed — activate now</label><button class="btn" id="inv" type="button" style="margin-top:10px">Send invitation</button><div class="msg" id="invMsg"></div></div>';
+  h+='<div class="card"><div class="scroll"><table><tr><th>Dealer</th><th>Active</th><th>Tier floor</th><th>Tax-exempt</th><th class="n">12-mo ft</th><th class="n">Lifetime</th><th>Note</th><th></th></tr>';
+  var life={};D.orders.forEach(function(o){if(o.status==='paid'||o.status==='shipped')life[o.dealer_id]=(life[o.dealer_id]||0)+(o.subtotal_cents||0)+(o.shipping_cents||0)});
+  var ft12={},cut=addDays(new Date(),-365);D.orders.forEach(function(o){if((o.status==='paid'||o.status==='shipped')&&o.paid_at&&new Date(o.paid_at)>cut)ft12[o.dealer_id]=(ft12[o.dealer_id]||0)+(o.lights_ft||0)});
+  D.dealers.forEach(function(d){
+    h+='<tr data-id="'+d.id+'"><td><b>'+esc(d.business_name||'(no name)')+'</b><div class="small">'+esc(d.email)+'<br>'+esc(d.contact_name||'')+' '+esc(d.phone||'')+'</div></td>'
+     +'<td><input type="checkbox" class="f-ap"'+(d.approved?' checked':'')+'></td>'
+     +'<td><select class="f-tf"><option value="starting"'+(d.tier_floor==='starting'?' selected':'')+'>Starting</option><option value="building"'+(d.tier_floor==='building'?' selected':'')+'>Building</option><option value="established"'+(d.tier_floor==='established'?' selected':'')+'>Established</option></select></td>'
+     +'<td><input type="checkbox" class="f-tx"'+(d.tax_exempt?' checked':'')+'><input class="f-tn" placeholder="Reason + certificate # (required)" value="'+esc(d.tax_exempt_note||'')+'" style="margin-top:4px"></td>'
+     +'<td class="n">'+(ft12[d.id]||0).toLocaleString()+'</td><td class="n">'+money(life[d.id]||0)+'</td>'
+     +'<td><input class="f-an" value="'+esc(d.admin_note||'')+'" placeholder="Private note"></td><td><button class="btn sm save" type="button">Save</button></td></tr>';
+  });
+  $('p-dealers').innerHTML=h+'</table></div><p class="small" style="margin-top:10px"><b>Tax-exempt:</b> leave unchecked for almost every dealer. Minnesota installers (contractors) pay sales tax on materials and cannot use a resale certificate. Only check it when you hold a valid exemption certificate (for example a Minnesota ST3), and write the reason and certificate number in the box. Orders shipped outside Minnesota need no exemption: Minnesota tax is not charged, so just keep the tracking number.</p><div class="msg" id="dMsg"></div></div>';
+  $('inv').onclick=function(){
+    var m=$('invMsg');this.disabled=true;
+    fn('invite-dealer',{email:$('ie').value,business_name:$('ib').value,contact_name:$('ic').value,phone:$('ip').value,approve:$('ia').checked}).then(function(r){
+      $('inv').disabled=false;if(!r.ok){msg(m,r.error);return}msg(m,'Invitation sent.','ok');load().then(function(){setTimeout(rDealers,900)})});
+  };
+}
+$('p-dealers').addEventListener('click',function(e){
+  var b=e.target.closest('.save');if(!b)return;var tr=b.closest('tr'),id=tr.getAttribute('data-id');
+  var tx=tr.querySelector('.f-tx').checked,note=tr.querySelector('.f-tn').value.trim();
+  if(tx&&!note){msg($('dMsg'),'Not saved. To mark a dealer tax-exempt, type the reason and certificate number in the box under the checkbox (for example: "MN ST3 #1234, exempt organization"). Minnesota installers (contractors) are NOT exempt.','err');try{$('dMsg').scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}return}
+  var an=tr.querySelector('.f-an').value.trim();
+  db.from('dealers').update({approved:tr.querySelector('.f-ap').checked,tier_floor:tr.querySelector('.f-tf').value,tax_exempt:tx,tax_exempt_note:note}).eq('id',id).select('id')
+  .then(function(r){if(r.error||!r.data||!r.data.length)return r;return db.from('dealer_private').upsert({dealer_id:id,admin_note:an}).then(function(r2){return r2.error?r2:r})}).then(function(r){
+    var none=!r.error&&Array.isArray(r.data)&&r.data.length===0;
+    msg($('dMsg'),r.error?r.error.message:none?'NOT saved. Your session is not verified with 2FA, or it expired. Sign out, sign in again, enter your 6-digit code, then retry.':'Saved.',(r.error||none)?'err':'ok');if(!r.error&&!none)load();try{$('dMsg').scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}});
+});
+
+/* ── Products & prices ── */
+var TIERS=['starting','building','established'];
+function rProducts(){
+  var D=S.D,pm={};D.prices.forEach(function(p){(pm[p.product_id]=pm[p.product_id]||{})[p.tier]=p.unit_cents});
+  var h='<div class="note">Per-meter products are priced <b>per foot</b> here and billed per 1 m piece (3.28084 ft). “Your cost” is your landed cost per piece (per 1 m for lights and track). It drives Net profit on the overview; leave blank if unknown. Orders already placed keep the prices they were placed at.</div><div class="card"><div class="scroll"><table><tr><th>Product</th><th>Prices (starting / building / established)</th><th>Your cost</th><th>Weight g</th><th>Stock</th><th>Image file</th><th>Active</th><th></th></tr>';
+  D.products.forEach(function(p){
+    var per=p.pricing_mode==='per_meter',pr=pm[p.id]||{};
+    h+='<tr data-id="'+p.id+'" data-per="'+(per?1:0)+'"><td><b>'+esc(p.name)+'</b><div class="small">'+esc(p.sku)+' · '+esc(p.category)+'</div></td><td>'
+     +TIERS.map(function(t){var v=pr[t];return'<input class="pt" data-t="'+t+'" inputmode="decimal" style="width:78px;display:inline-block;margin-right:4px" value="'+(v==null?'':per?(Math.round(v/FT)/100).toFixed(2):(v/100).toFixed(2))+'">'}).join('')+'<div class="small">'+(per?'$ per foot':'$ each')+'</div></td>'
+     +'<td><input class="pc" inputmode="decimal" style="width:84px" value="'+(p.cost_cents==null?'':(p.cost_cents/100).toFixed(2))+'"><div class="small">'+(per?'per 1 m':'each')+'</div></td>'
+     +'<td><input class="pw" inputmode="numeric" style="width:84px" value="'+(p.weight_g==null?'':p.weight_g)+'"></td>'
+     +'<td><input class="ps" inputmode="numeric" style="width:70px" value="'+(p.stock_qty==null?'':p.stock_qty)+'" placeholder="untracked"></td>'
+     +'<td><input class="pi" value="'+esc(p.image_file||'')+'" style="width:150px"></td>'
+     +'<td><input type="checkbox" class="pa"'+(p.active?' checked':'')+'></td><td><button class="btn sm save" type="button">Save</button></td></tr>';
+  });
+  $('p-products').innerHTML=h+'</table></div><div class="msg" id="pMsg"></div></div>';
+}
+$('p-products').addEventListener('click',function(e){
+  var b=e.target.closest('.save');if(!b)return;var tr=b.closest('tr'),id=+tr.getAttribute('data-id'),per=tr.getAttribute('data-per')==='1',m=$('pMsg');
+  var rows=[];var bad=false;
+  tr.querySelectorAll('.pt').forEach(function(i){var c=toCents(i.value);if(c==null||c<=0){bad=true;return}rows.push({product_id:id,tier:i.getAttribute('data-t'),unit_cents:per?Math.round(c/100*FT*100):c})});
+  if(bad){msg(m,'Enter a price for all three tiers.');return}
+  var cost=tr.querySelector('.pc').value.trim(),w=tr.querySelector('.pw').value.trim(),st=tr.querySelector('.ps').value.trim();
+  var costC=cost===''?null:toCents(cost);
+  var upd={weight_g:w===''?null:parseInt(w),stock_qty:st===''?null:parseInt(st),image_file:tr.querySelector('.pi').value.trim()||null,active:tr.querySelector('.pa').checked};
+  Promise.all([db.from('prices').upsert(rows,{onConflict:'product_id,tier'}),db.from('products').update(upd).eq('id',id),db.from('product_costs').upsert({product_id:id,cost_cents:costC})]).then(function(rs){
+    var er=rs[0].error||rs[1].error||rs[2].error;msg(m,er?er.message:'Saved. Dealers see the new price immediately.',er?'err':'ok');if(!er)load()});
+});
+
+/* ── Ledger ── */
+var CAT_EXP=['Shipping labels','Software & tools','Marketing','Legal & professional','Insurance','Samples & demo kits','Other expense'];
+var CAT_REV=['Offline sale','Opening balance (before this system)','Other income'];
+function rLedger(){
+  var h='<div class="note">Use the ledger only for money Stripe doesn\'t see. <b>Do not</b> enter inventory purchases here: product cost is already counted from the “Your cost” field on each product, and entering both would count it twice. Entries are never deleted; void them with a reason.</div>'
+   +'<div class="card" style="margin-bottom:14px"><h3>Add an entry</h3><div class="bar"><div><label>Date</label><input id="ld" type="date" value="'+new Date().toISOString().slice(0,10)+'"></div>'
+   +'<div><label>Type</label><select id="lk"><option value="expense">Expense</option><option value="revenue">Income</option></select></div>'
+   +'<div><label>Category</label><select id="lc"></select></div><div><label>Amount ($)</label><input id="la" inputmode="decimal"></div><div style="flex:1;min-width:200px"><label>Description</label><input id="lx"></div><div><label>&nbsp;</label><button class="btn" id="ladd" type="button">Add</button></div></div><div class="msg" id="lMsg"></div></div>'
+   +'<div class="card"><div class="scroll"><table><tr><th>Date</th><th>Type</th><th>Category</th><th>Description</th><th class="n">Amount</th><th></th></tr>';
+  S.D.ledger.slice().sort(function(a,b){return a.entry_date<b.entry_date?1:-1}).forEach(function(e){
+    h+='<tr data-id="'+e.id+'" style="'+(e.voided?'opacity:.45;text-decoration:line-through':'')+'"><td>'+esc(e.entry_date)+'</td><td>'+(e.kind==='revenue'?'Income':'Expense')+'</td><td>'+esc(e.category)+'</td><td>'+esc(e.description||'')+(e.voided?' <span class="small">(void: '+esc(e.void_reason||'')+')</span>':'')+'</td><td class="n">'+money(e.amount_cents)+'</td><td>'+(e.voided?'':'<button class="btn ghost sm edit" type="button">Edit</button> <button class="btn ghost sm void" type="button">Void</button>')+'</td></tr>'});
+  $('p-ledger').innerHTML=h+'</table></div></div>';
+  function cats(){$('lc').innerHTML=($('lk').value==='expense'?CAT_EXP:CAT_REV).map(function(c){return'<option>'+esc(c)+'</option>'}).join('')}
+  cats();$('lk').onchange=cats;
+  $('ladd').onclick=function(){
+    var c=toCents($('la').value),m=$('lMsg');if(!c||c<=0){msg(m,'Enter an amount greater than 0.');return}
+    db.from('ledger_entries').insert({entry_date:$('ld').value,kind:$('lk').value,category:$('lc').value,amount_cents:c,description:$('lx').value.trim()}).then(function(r){
+      if(r.error){msg(m,r.error.message);return}load().then(rLedger)})};
+}
+$('p-ledger').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;var tr=b.closest('tr');if(!tr)return;var id=+tr.getAttribute('data-id'),en=S.D.ledger.filter(function(x){return x.id===id})[0];
+  if(b.classList.contains('void')){var why=prompt('Reason for voiding this entry?');if(!why)return;
+    db.from('ledger_entries').update({voided:true,void_reason:why}).eq('id',id).then(function(){load().then(rLedger)})}
+  if(b.classList.contains('edit')){var a=prompt('New amount in dollars',(en.amount_cents/100).toFixed(2));if(a==null)return;var c=toCents(a);if(!c||c<=0){alert('Invalid amount');return}
+    var d=prompt('Description',en.description||'');if(d==null)return;
+    db.from('ledger_entries').update({amount_cents:c,description:d}).eq('id',id).then(function(){load().then(rLedger)})}
+});
+
+/* ── Shipping ── */
+function rShipping(){
+  var D=S.D,h='<div class="note">Shipping works like this: dealer sees an estimate from this table (carrier rate for their zone + your flat packing fee) and you confirm the final amount when you approve each order. Until zones, rates, and product weights are filled in, carts show “Confirmed on invoice”.</div>'
+   +'<div class="grid2"><div class="card"><h3>Packing fee</h3><label>Flat packing fee added to every shipment ($)</label><input id="pf" inputmode="decimal" value="'+(parseInt(S.settings.packing_fee_cents||'750')/100).toFixed(2)+'" style="max-width:140px"><button class="btn sm" id="pfs" type="button" style="margin-top:8px">Save</button><div class="msg" id="sMsg"></div>'
+   +'<h3 style="margin-top:18px">State zones</h3><p class="small">One per line: <code>MN,1</code>. Pasting replaces matching states.</p><textarea id="zt" rows="6" placeholder="MN,1&#10;WI,1&#10;IA,2"></textarea><button class="btn sm" id="zs" type="button" style="margin-top:8px">Save zones</button>'
+   +'<div class="small" style="margin-top:8px">'+(D.zones.length?D.zones.map(function(z){return esc(z.state)+'='+z.zone}).join(' · '):'No zones yet.')+'</div></div>'
+   +'<div class="card"><h3>Rate table</h3><p class="small">Carrier cost up to a weight, per zone. Weight in grams (1 lb = 454 g).</p><div class="scroll"><table><tr><th>Zone</th><th class="n">Up to (g)</th><th class="n">Cost</th><th></th></tr>'
+   +D.rates.map(function(x){return'<tr data-z="'+x.zone+'" data-w="'+x.max_weight_g+'"><td>'+x.zone+'</td><td class="n">'+x.max_weight_g.toLocaleString()+'</td><td class="n">'+money(x.cents)+'</td><td><button class="btn ghost sm del" type="button">Remove</button></td></tr>'}).join('')
+   +'</table></div><div class="row2"><div><label>Zone</label><input id="rz" inputmode="numeric"></div><div><label>Up to (grams)</label><input id="rw" inputmode="numeric"></div><div><label>Carrier cost ($)</label><input id="rc" inputmode="decimal"></div><div><label>&nbsp;</label><button class="btn sm" id="ra" type="button">Add rate</button></div></div></div></div>';
+  $('p-shipping').innerHTML=h;var m=$('sMsg');
+  $('pfs').onclick=function(){var c=toCents($('pf').value);if(c==null||c<0){msg(m,'Enter a valid amount.');return}
+    db.from('settings').upsert({key:'packing_fee_cents',value:String(c)}).then(function(r){msg(m,r.error?r.error.message:'Saved.',r.error?'err':'ok');if(!r.error)load()})};
+  $('zs').onclick=function(){var rows=[],bad=false;$('zt').value.split('\n').forEach(function(l){l=l.trim();if(!l)return;var p=l.split(/[,\s]+/);if(!/^[A-Za-z]{2}$/.test(p[0])||!/^\d+$/.test(p[1]||'')){bad=true;return}rows.push({state:p[0].toUpperCase(),zone:parseInt(p[1])})});
+    if(bad||!rows.length){msg(m,'Each line must look like MN,1');return}
+    db.from('state_zones').upsert(rows).then(function(r){msg(m,r.error?r.error.message:'Zones saved.',r.error?'err':'ok');if(!r.error)load().then(rShipping)})};
+  $('ra').onclick=function(){var z=parseInt($('rz').value),w=parseInt($('rw').value),c=toCents($('rc').value);if(!(z>=0)||!(w>0)||c==null){msg(m,'Fill in zone, weight, and cost.');return}
+    db.from('shipping_rates').upsert({zone:z,max_weight_g:w,cents:c}).then(function(r){if(r.error){msg(m,r.error.message);return}load().then(rShipping)})};
+}
+$('p-shipping').addEventListener('click',function(e){var b=e.target.closest('.del');if(!b)return;var tr=b.closest('tr');
+  db.from('shipping_rates').delete().eq('zone',+tr.getAttribute('data-z')).eq('max_weight_g',+tr.getAttribute('data-w')).then(function(){load().then(rShipping)})});
+
+/* ── Goals ── */
+function rGoals(){
+  $('p-goals').innerHTML='<div class="card" style="max-width:520px"><h3>Monthly goals</h3><p class="small">Shown as progress bars on the overview. Set 0 to hide a goal.</p>'
+   +'<label>Revenue goal per month ($)</label><input id="g1" inputmode="decimal" value="'+(parseInt(S.settings.goal_revenue_cents||'0')/100)+'">'
+   +'<label>Feet of lights per month</label><input id="g2" inputmode="numeric" value="'+parseInt(S.settings.goal_lights_ft||'0')+'">'
+   +'<label>New dealers per month</label><input id="g3" inputmode="numeric" value="'+parseInt(S.settings.goal_new_dealers||'0')+'">'
+   +'<button class="btn" id="gs" type="button" style="margin-top:14px">Save goals</button><div class="msg" id="gMsg"></div></div>';
+  $('gs').onclick=function(){var rev=toCents($('g1').value);if(rev==null||rev<0){msg($('gMsg'),'Invalid revenue goal.');return}
+    db.from('settings').upsert([{key:'goal_revenue_cents',value:String(rev)},{key:'goal_lights_ft',value:String(parseInt($('g2').value)||0)},{key:'goal_new_dealers',value:String(parseInt($('g3').value)||0)}]).then(function(r){
+      msg($('gMsg'),r.error?r.error.message:'Saved.',r.error?'err':'ok');if(!r.error)load()})};
+}
+
+/* ── Audit log ── */
+function rAudit(){
+  $('p-audit').innerHTML='<p class="empty">Loading…</p>';
+  db.from('audit_log').select('*').order('id',{ascending:false}).limit(250).then(function(r){
+    var rows=r.data||[],h='<div class="note">Append-only record of every change. It can\'t be edited or deleted from the app. Webhook and server actions show as “System”.</div><div class="card"><div class="scroll"><table><tr><th>When</th><th>Who</th><th>What</th><th>Changed</th></tr>';
+    rows.forEach(function(a){
+      var who=!a.user_id?'System':(a.user_id===S.user.id?'You':a.user_id.slice(0,8)),ch='';
+      if(a.action==='UPDATE'&&a.old_row&&a.new_row){ch=Object.keys(a.new_row).filter(function(k){return JSON.stringify(a.new_row[k])!==JSON.stringify(a.old_row[k])&&k!=='items'}).map(function(k){return esc(k)+': '+esc(trunc(a.old_row[k]))+' → '+esc(trunc(a.new_row[k]))}).join('<br>')}
+      else if(a.action==='INSERT')ch='<span class="small">created</span>';else if(a.action==='DELETE')ch='<span class="small">removed</span>';
+      h+='<tr><td>'+esc(fmtDT(a.at))+'</td><td>'+esc(who)+'</td><td>'+esc(a.action)+' '+esc(a.table_name)+' <span class="small">'+esc(a.row_key||'')+'</span></td><td class="small">'+ch+'</td></tr>'});
+    $('p-audit').innerHTML=h+'</table></div></div>';
+  });
+}
+function trunc(v){var s=v==null?'—':typeof v==='object'?JSON.stringify(v):String(v);return s.length>40?s.slice(0,40)+'…':s}
+
+gate();
+})();
+</script>
+</body>
+</html>
